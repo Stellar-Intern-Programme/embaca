@@ -260,6 +260,18 @@ body {
     gap: 5px;
 }
 
+.right .weather .charts .lines .chart2 {
+    color: white;
+    font-size: 8px;
+    gap: 5px;
+}
+
+.right .weather .charts .lines .chart3 {
+    color: white;
+    font-size: 8px;
+    gap: 5px;
+}
+
 .right .background path {
     fill: red;
 }
