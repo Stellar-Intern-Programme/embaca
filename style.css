@@ -112,6 +112,13 @@ body {
     left: 75px;
 }
 
+.right .background2 {
+    position: absolute;
+    width: 50%;
+    top: 80px;
+    left: 165px;
+}
+
 .right .text {
     display: flex;
     justify-content: space-between;
@@ -225,17 +232,17 @@ body {
 .right .weather .charts .lines .chart1 .line1 {
     background-color: #365B7D;
     border-radius: 10px;
-    height: 100px;
+    height: 80px;
     width: 10px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .right .weather .charts .lines .chart2 .line2 {
-    background-color: #365B7D;
+    background-color: yellow;
     border-radius: 10px;
-    height: 100px;
+    height: 120px;
     width: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .right .weather .charts .lines .chart3 .line3 {
@@ -249,9 +256,9 @@ body {
 .right .weather .charts .lines .chart4 .line4 {
     background-color: #365B7D;
     border-radius: 10px;
-    height: 100px;
+    height: 60px;
     width: 10px;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .right .weather .charts .lines .chart1 {
@@ -272,6 +279,19 @@ body {
     gap: 5px;
 }
 
+.right .weather .charts .lines .chart4 {
+    color: white;
+    font-size: 8px;
+    gap: 5px;
+}
+
 .right .background path {
     fill: red;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 }
