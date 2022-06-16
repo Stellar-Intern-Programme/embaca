@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #87B6E1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(217, 255, 253);
+    height: 703px;
+    width: 1145px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.left {
+    display: flex;
+    display: table-column;
+    flex: 0.7;
+    background-color: #DDF0F5;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.left .menu {
+    display: flex;
+}
+
+.allplaces {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.left .menu .search {
+    display: flex;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    height: 35px;
+    width: 35%;
+}
+
+.left .menu .search input {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.left .text {
+    font-size: 35px;
+}
+
+.left .images {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.left .images img {
+    width: 140px;
+    height: 160px;
+    border-radius: 10px;
+}
+
+.left .images .add {
+    display: flex;
+    display: table-column;
+    width: 140px;
+    height: 160px;
+    border: 1px solid #1F3B5B;
+    border-radius: 10px;
+}
+
+.left .images .add a {
+    display: flex;
+    justify-content: center;
+}
+
+.left .images .add .plus {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    margin-top: 20px;
+}
+
+.right {
+    display: flex table-column;
+    flex: 0.3;
+    background-color: #1F3B5B;
+    position: relative;
+}
+
+.right .text {
+    color: beige;
+    gap: 15px;
+    z-index: 2;
+}
+
+.right .background {
+    position: absolute;
+    width: 80%;
+    top: 280px;
+    left: 75px;
+}
+
+.right .text {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 40px;
+    margin-right: 10px;
+}
+
+.right .text a {
+    display: flex;
+    gap: 5px;
+    padding-top: 50px;
+}
+
+.right .text .notification {
+    display: flex;
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.right .text img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 33px;
+    margin-left: 220px;
+    position: absolute;
+}
+
+.right .text .red_dot {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 38px;
+    z-index: 2;
+}
+
+.right .temperature {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 5px;
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+.right .temperature .day {
+    display: flex table-column;
+}
+
+.right .weather {
+    display: flex table-column;
+}
+
+.right .temperature .day h3 {
+    font-size: 16px;
+}
+
+.right .weather .grades {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.right .weather .grades h1 {
+    font-size: 150px;
+}
+
+.right .weather .location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.right .weather .charts {
+    margin-top: 60px;
+    display: flex;
+}
+
+.right .weather .charts .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 40px;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.right .weather .charts .chance {
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+}
+
+.right .weather .charts .lines {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    margin-right: 15px;
+}
+
+.right .weather .charts .lines .chart1 .line1 {
+    background-color: #365B7D;
+    border-radius: 10px;
+    height: 100px;
+    width: 10px;
+    margin-top: 30px;
+}
+
+.right .weather .charts .lines .chart2 .line2 {
+    background-color: #365B7D;
+    border-radius: 10px;
+    height: 100px;
+    width: 10px;
+    margin-top: 30px;
+}
+
+.right .weather .charts .lines .chart3 .line3 {
+    background-color: #365B7D;
+    border-radius: 10px;
+    height: 100px;
+    width: 10px;
+    margin-top: 30px;
+}
+
+.right .weather .charts .lines .chart4 .line4 {
+    background-color: #365B7D;
+    border-radius: 10px;
+    height: 100px;
+    width: 10px;
+    margin-top: 30px;
+}
+
+.right .weather .charts .lines .chart1 {
+    color: white;
+    font-size: 8px;
+    gap: 5px;
+}
+
+.right .background path {
+    fill: red;
+}
