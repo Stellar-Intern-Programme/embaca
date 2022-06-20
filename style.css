@@ -157,12 +157,11 @@ body {
     display: flex;
     gap: 20px;
     font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
-.left .weather .time .another_time {
-    display: flex;
-    opacity: 50%;
-    gap: 20px;
+.left .weather .time .active {
+    color: black;
 }
 
 .left .weather .charts {
@@ -527,8 +526,12 @@ body {
     .left .weather {
         font-size: 7px;
     }
+    .left .weather .time {
+        white-space: nowrap;
+        overflow: scroll;
+    }
     .left .weather .charts {
-        gap: 20px;
+        gap: 10px;
     }
     .left .weather .charts .days_chart {
         padding-bottom: 5px;
