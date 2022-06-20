@@ -38,6 +38,49 @@ body {
     margin-top: 10px;
     margin-left: 5px;
     font-size: 15px;
+    display: flex;
+}
+
+.dropbtn {
+    display: flex;
+}
+
+.drop {
+    position: relative;
+    display: inline-flex;
+    transform: none;
+}
+
+.drop_content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #365B7D;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.drop_content a {
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.drop_content a:hover {
+    background-color: #87B6E1;
+    color: black;
+}
+
+.drop:hover .drop_content {
+    display: flex;
+    left: 80px;
+    top: -10px;
 }
 
 .left .menu .search {
@@ -63,12 +106,25 @@ body {
     gap: 40px;
     margin-top: 30px;
     padding-top: 10px;
+    font-size: 18px;
 }
 
 .left .images img {
     width: 140px;
     height: 160px;
     border-radius: 10px;
+}
+
+.left .images .selected_city img {
+    width: 155px;
+    height: 175px;
+    border-radius: 10px;
+    transform: none;
+}
+
+.left .images .selected_city p {
+    font-size: 22px;
+    transform: none;
 }
 
 .left .images .add {
@@ -289,13 +345,35 @@ body {
     fill: red;
 }
 
-.images img {
+.images .another_city {
     transition: 0.5s all;
     cursor: pointer;
 }
 
-.images img:hover {
+.images .another_city:hover {
     transform: scale(1.1);
+    font-weight: 600;
+}
+
+.images .plus {
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.images .plus:hover {
+    transform: scale(1.5) rotate(90deg);
+    margin-left: 10px;
+}
+
+.allplaces .arrow {
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.allplaces:hover .arrow {
+    transform: rotate(-90deg);
+    margin-top: -6px;
+    margin-left: 6px;
 }
 
 @media screen and (max-width: 700px) {
