@@ -44,6 +44,7 @@ function closeModal() {
 }
 
 function onInputChange(event) {
+    const inputPhoto = document.getElementById("photoURLinput");
     let background = document.getElementById("background_image");
     background.style.backgroundImage = `url("${inputPhoto.value}")`;
     background.style.backgroundSize = "cover";
