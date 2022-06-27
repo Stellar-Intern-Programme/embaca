@@ -9,11 +9,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <script src="index.js"></script>
+    <title>Weather Forecast</title>
 </head>
 
 <body>
+    <div class="modal" id="modal">
+        <div class="popup_box">
+            <input type="text" class="search" id="searchInput" placeholder="     City Name">
+            <input type="text" class="search" id="photoURLinput" placeholder="     Photo URL">
+            <div class="background_image" id="background_image">
+                <div class="img_content" id="imgContent"><img src="src/no_image.svg" alt="no image">
+                    <p>City Image</p>
+                </div>
+
+            </div>
+            <div class="add_city_btn" onclick="submitForm()">
+                <p>Add city</p>
+            </div>
+        </div>
+    </div>
     <div class="container">
+
         <div class="left">
 
             <div class="menu">
@@ -38,17 +55,9 @@
             <div class="text">
                 <p>Weather <b>Forecast</b></p>
             </div>
-            <div class="images">
-                <div class="selected_city"><img src="src/berlin.jpg" alt="palat">
-                    <p><b>Berlin, D</b></p>
-                </div>
-                <div class="another_city"><img src="src/cluj.jpg" alt="palat">
-                    <p>Cluj, RO</p>
-                </div>
-                <div class="another_city"><img src="src/paris.jpg" alt="palat">
-                    <p>Paris, FR</p>
-                </div>
-                <div class="add">
+            <div class="images" id="images">
+
+                <div class="add" onclick="openModal()">
                     <div class="plus">+</div><a>Add city</a></div>
 
             </div>
