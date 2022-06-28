@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
     <script src="index.js"></script>
     <title>Weather Forecast</title>
+    <link rel="icon" type="image/png" href="src/tab_icon.ico">
 </head>
 
 <body>
@@ -57,7 +58,7 @@
             </div>
             <div class="images" id="images">
 
-                <div class="add" onclick="openModal()">
+                <div class="add" id="add" onclick="openModal()">
                     <div class="plus">+</div><a>Add city</a></div>
 
             </div>
@@ -195,7 +196,7 @@
                     <p>°C</p>
                 </div>
                 <div class="location">
-                    <p>Berlin, Germany</p>
+                    <p id="location"></p>
                     <p>Feels like 34 &nbsp; ⬤ &nbsp; Sunset 20:15</p>
                 </div>
                 <div class="charts">

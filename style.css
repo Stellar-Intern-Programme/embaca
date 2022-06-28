@@ -40,6 +40,9 @@ body {
     justify-content: center;
     background-color: #87B6E1;
     padding: 10px;
+    background-image: url("https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -47,7 +50,7 @@ body {
     justify-content: center;
     background-color: rgb(217, 255, 253);
     height: 90vh;
-    width: fit-content;
+    width: 80vw;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -213,6 +216,7 @@ body {
     flex-shrink: 0;
     overflow: scroll;
     overflow-y: hidden;
+    height: 260px;
 }
 
 .left .images img {
@@ -531,6 +535,7 @@ body {
 .images .another_city {
     transition: 0.5s all;
     cursor: pointer;
+    padding-left: 10px;
 }
 
 .images .another_city:hover {
