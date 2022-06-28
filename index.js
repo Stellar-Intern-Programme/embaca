@@ -71,6 +71,7 @@ function closeModal() {
 }
 
 function onInputChange(event) {
+    const inputPhoto = document.getElementById("photoURLinput");
     let background = document.getElementById("background_image");
     background.style.backgroundImage = `url("${event.target.value}")`; //modific background image cu valoarea la photoInput
     background.style.backgroundSize = "cover";
