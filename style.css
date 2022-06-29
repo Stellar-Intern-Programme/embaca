@@ -582,6 +582,14 @@ body {
         opacity: 1;
     }
 }
+.locatie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+
 
 @media screen and (max-width: 700px) {
     body {

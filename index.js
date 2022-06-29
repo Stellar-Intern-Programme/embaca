@@ -81,3 +81,13 @@ function onInputChange(event) {
     imgContent.style.display = "none"; //fac sa dispara imaginea de inceput
     console.log(event)
 }
+function search(e) {
+ 
+    let remain = cityArray.filter(f => f.cityName.includes(e.value))
+    console.log(remain)
+    cityList.innerHTML=""
+    cityList.innerHTML= `<div class="add" id="add" onclick="openModal()">
+    <div class="plus">+</div><a>Add city</a></div>`
+    remain.forEach(e => cityMap(e))
+
+}
