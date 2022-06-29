@@ -35,13 +35,10 @@
         <div class="left">
 
             <div class="menu">
-                <div class="search"><img src="src/search.svg" alt="search"><input type="text" placeholder="search" onfocus="openRecomends()" id="menuSearchInput">
+                <div class="search"><img src="src/search.svg" alt="search"><input type="text" placeholder="search" onkeyup="recommend(this)" onfocus="openRecomends()" id="menuSearchInput">
                 </div>
                 <div class="recomends" id="recomends">
-                    <p onclick="selectedCityInput(this)">city1</p>
-                    <p onclick="selectedCityInput(this)">city2</p>
-                    <p onclick="selectedCityInput(this)">city3</p>
-                    <p onclick="selectedCityInput(this)">city4</p>
+
                 </div>
                 <div class="allplaces">
                     <div class="drop">
@@ -202,8 +199,10 @@
                     <p>°C</p>
                 </div>
                 <div class="location">
-                    <p id="location"></p>
-                    <div class="trash" onclick="deleteCity()"><img src="src/trash.svg" alt="delete"></div>
+                    <div class="remove_container">
+                        <p id="location"></p>
+                        <div class="trash" onclick="deleteCity()"><img src="src/trash.svg" alt="delete"></div>
+                    </div>
                     <p>Feels like 34 &nbsp; ⬤ &nbsp; Sunset 20:15</p>
                 </div>
                 <div class="charts">
