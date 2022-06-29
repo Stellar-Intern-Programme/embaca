@@ -41,8 +41,9 @@ function redrawCities() {
 //functia cityMap pentru array-ul city, unde fac div-ul pentru oras cu imaginea si textul si ii dau clasa "another_city"
 function selectCity(city) {
     const location = document.getElementById("location")
-    location.innerHTML = city.cityName;
-
+    if(city && city.hasOwnProperty("cityName")){
+        location.innerHTML = city.cityName;
+    }
 
 }
 
