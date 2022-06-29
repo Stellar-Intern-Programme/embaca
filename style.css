@@ -12,7 +12,7 @@
 /* Track */
 
  ::-webkit-scrollbar-track {
-    background: #1F3B5B;
+    background: #1f3b5b00;
     border-radius: 20px;
     width: 10px;
 }
@@ -138,6 +138,32 @@ body {
 
 .left .menu {
     display: flex;
+}
+
+.left .menu .recomends {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    background-color: #d9d9d9e0;
+    border-radius: 5px;
+    height: fit-content;
+    width: 25%;
+    top: 14vh;
+    position: absolute;
+    z-index: 1;
+}
+
+.left .menu .recomends p {
+    color: black;
+    padding: 10px;
+    border: .2px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.left .menu .recomends p:hover {
+    background-color: #87B6E1;
 }
 
 .allplaces {
@@ -446,6 +472,11 @@ body {
     color: white;
 }
 
+.right .weather .location .trash {
+    z-index: 6;
+    cursor: pointer;
+}
+
 .right .weather .charts {
     margin-top: 60px;
     display: flex;
@@ -610,6 +641,10 @@ body {
         align-self: flex-end;
         width: 30%;
         height: 30%;
+    }
+    .left .menu .recomends {
+        top: 55vh;
+        right: 50vw
     }
     .allplaces .arrow {
         transform: rotate(-90deg);

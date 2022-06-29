@@ -41,7 +41,7 @@ function redrawCities() {
 //functia cityMap pentru array-ul city, unde fac div-ul pentru oras cu imaginea si textul si ii dau clasa "another_city"
 function selectCity(city) {
     const location = document.getElementById("location")
-    if(city && city.hasOwnProperty("cityName")){
+    if (city && city.hasOwnProperty("cityName")) {
         location.innerHTML = city.cityName;
     }
 
@@ -80,4 +80,24 @@ function onInputChange(event) {
     let imgContent = document.getElementById("imgContent");
     imgContent.style.display = "none"; //fac sa dispara imaginea de inceput
     console.log(event)
+}
+
+function deleteCity() {
+    cityArray.pop();
+    redrawCities();
+    console.log(cityArray);
+}
+
+function openRecomends() {
+    let recomends = document.getElementById("recomends");
+    recomends.style.display = "flex";
+}
+
+function selectedCityInput(element) {
+    const cityName = document.getElementById("menuSearchInput");
+    console.log(cityName);
+    cityName.value = element.innerText;
+    console.log(element.innerText)
+    let recomends = document.getElementById("recomends");
+    recomends.style.display = "none";
 }
