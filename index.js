@@ -25,12 +25,53 @@ function renderWeather() {
 }
 
 
-function renderWeatherData(click) {
+function renderWeatherData(click) { 
+    const daysCharts = document.getElementById("charts")
+    daysCharts.innerHTML = ""
     const data = weather[click]
-    console.log(data)
-    const div = document.createElement("p")
+    const days = data.map(element => element.day)
+    const daysDiv = document.createElement("div")
+    daysDiv.innerHTML = ""
+    days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
+   daysDiv.className = "days_chart"
+    daysCharts.appendChild(daysDiv)
+
+    const rainChance = data.map(element => element.rainChance)
+    const rainDiv = document.createElement("div")
+    rainDiv.innerHTML = ""
+    rainChance.forEach(rain => rainDiv.innerHTML += `<p>${rain}%</p>`)
+   rainDiv.className = "umidity"
+    daysCharts.appendChild(rainDiv)
+
+    const storm = data.map(element => element.day)
+    const stormDiv = document.createElement("div")
+    stormDiv.innerHTML = ""
+    days.forEach(daysString => {
+        const img = document.createElement("img")
+        img.src = "src/storm.svg" 
+        img.alt = "storm"
+        stormDiv.appendChild(img)
+    })
+   stormDiv.className = "storm"
+    daysCharts.appendChild(stormDiv)
 
 
+
+
+
+    const minDegrees = data.map(element => element.day)
+    const minDiv = document.createElement("div")
+    daysDiv.innerHTML = ""
+    days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
+   daysDiv.className = "days_chart"
+    daysCharts.appendChild(daysDiv)
+
+    const maxDegrees = data.map(element => element.day)
+    const maxDiv = document.createElement("div")
+    daysDiv.innerHTML = ""
+    days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
+   daysDiv.className = "days_chart"
+    daysCharts.appendChild(daysDiv)
 }
 
 let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
@@ -117,12 +158,12 @@ function onInputChange(event) {
 }
 
 function deleteCity() {
-    cityArray = cityArray.filter(city => city.cityName !== activeCity.cityName)
-    console.log(cityArray, activeCity)
-    localStorage.setItem("city", JSON.stringify(cityArray))
+    cityArray = cityArray.filter((city) => city.cityName !== activeCity.cityName);
+    console.log(cityArray, activeCity);
+    localStorage.setItem("city", JSON.stringify(cityArray));
     redrawCities();
-    selectCity(cityArray[0])
-    cityList.children[0].className = "selected_city"
+    selectCity(cityArray[0]);
+    cityList.children[0].className = "selected_city";
 }
 
 function openRecomends() {
@@ -167,4 +208,17 @@ function search(e) {
     cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
     <div class="plus">+</div><a>Add city</a></div>`;
     remain.forEach((e) => cityMap(e));
+}
+
+function renderWeatherContent() {
+    const leftCharts = document.getElementById("leftCharts");
+    const chart1 = document.getElementById("chart1")
+    chart1.style.display = "flex";
+    const daysCharts = document.getElementById("daysCHarts");
+    daysCharts.appendChild(p);
+    const p = createElement("p");
+    p.textContent = item
+    const umidity = document.getElementById("umidity");
+    const img = createElement("img");
+    img.setAttribute("src", "src/rain_drop.svg");
 }
