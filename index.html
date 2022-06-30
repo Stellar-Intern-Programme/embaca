@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
     <title>Weather Forecast</title>
     <link rel="icon" type="image/png" href="src/tab_icon.ico">
 </head>
@@ -73,8 +73,8 @@
                     <p>6 Months</p>
 
                 </div>
-                <div class="charts">
-                    <div class="days_chart">
+                <div class="charts" id="leftCharts">
+                    <div class="days_chart" id="daysCharts">
                         <p>Monday</p>
                         <p>Tuesday</p>
                         <p>Wednesday</p>
@@ -83,7 +83,7 @@
                         <p>Saturday</p>
                         <p>Sunday</p>
                     </div>
-                    <div class="umidity">
+                    <div class="umidity" id="umidity">
                         <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
                             <p>50%</p>
                         </div>
@@ -106,7 +106,7 @@
                             <p>50%</p>
                         </div>
                     </div>
-                    <div class="storm">
+                    <div class="storm" id="storm">
                         <img src="src/storm.svg" alt="storm">
                         <img src="src/storm.svg" alt="storm">
                         <img src="src/storm.svg" alt="storm">
@@ -116,11 +116,11 @@
                         <img src="src/storm.svg" alt="storm">
 
                     </div>
-                    <div class="chart_bars">
-                        <div class="chart1">
+                    <div class="chart_bars" id="chartBars">
+                        <div class="chart1" id="chart1">
                             <p>17°C</p>
-                            <div class="chart_bar">
-                                <div class="filled_chart_bar"></div>
+                            <div class="chart_bar" id="chartBar">
+                                <div class="filled_chart_bar" id="filledChartBar"></div>
                             </div>
                             <p>26°C</p>
                         </div>
