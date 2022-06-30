@@ -1,5 +1,6 @@
-const cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
+let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
 let cityList;
+let activeCity;
 window.addEventListener("load", (event) => {
     //functia asta se apeleaza dupa ce se incarca tot
     cityList = document.getElementById("images");
@@ -41,6 +42,7 @@ function selectCity(city) {
     const location = document.getElementById("location");
     if (city && city.hasOwnProperty("cityName")) {
         location.innerHTML = city.cityName;
+        activeCity = city;
     }
 }
 
@@ -79,9 +81,12 @@ function onInputChange(event) {
 }
 
 function deleteCity() {
-    cityArray.pop();
+    cityArray = cityArray.filter(city => city.cityName !== activeCity.cityName)
+    console.log(cityArray, activeCity)
+    localStorage.setItem("city", JSON.stringify(cityArray))
     redrawCities();
-    console.log(cityArray);
+    selectCity(cityArray[0])
+    cityList.children[0].className = "selected_city"
 }
 
 function openRecomends() {
@@ -94,13 +99,19 @@ function selectedCityInput(element) {
     console.log(cityName);
     cityName.value = element.innerText;
     console.log(element.innerText);
+    removeRecommend();
+    search(cityName);
+}
+
+function removeRecommend() {
     let recomends = document.getElementById("recomends");
     recomends.style.display = "none";
-    search(cityName);
 }
 
 function recommend(e) {
     if (e.value === "") {
+        redrawCities();
+        removeRecommend();
         return;
     }
     console.log(e.value);
