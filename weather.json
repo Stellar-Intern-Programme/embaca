@@ -1,0 +1,2152 @@
+{
+    "Week": [
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        }
+    ],
+    "Month": [
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        }
+    ],
+    "3 Months": [
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        }
+    ],
+    "6 Months": [
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        },
+        {
+            "day": "Monday",
+            "minDegrees": "10",
+            "maxDegrees":"25",
+            "rainChance": "10"
+        },
+        {
+            "day": "Tuesday",
+            "minDegrees": "15",
+            "maxDegrees":"30",
+            "rainChance": "90"
+        },
+        {
+            "day": "Wednesday",
+            "minDegrees": "2",
+            "maxDegrees":"8",
+            "rainChance": "0"
+        },
+        {
+            "day": "Thursday",
+            "minDegrees": "9",
+            "maxDegrees":"33",
+            "rainChance": "50"
+        },
+        {
+            "day": "Friday",
+            "minDegrees": "-2",
+            "maxDegrees":"5",
+            "rainChance": "100"
+        },
+        {
+            "day": "Saturday",
+            "minDegrees": "0",
+            "maxDegrees":"2",
+            "rainChance": "20"
+        },
+        {
+            "day": "Sunday",
+            "minDegrees": "15",
+            "maxDegrees":"22",
+            "rainChance": "75"
+        }
+    ]
+}

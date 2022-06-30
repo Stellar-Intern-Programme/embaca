@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
+    <script type = "module" src="index.js" ></script>
     <title>Weather Forecast</title>
     <link rel="icon" type="image/png" href="src/tab_icon.ico">
 </head>
@@ -35,7 +35,8 @@
         <div class="left">
 
             <div class="menu">
-                <div class="search"><img src="src/search.svg" alt="search"><input type="text" placeholder="search" onkeyup="recommend(this)" onfocus="openRecomends()" id="menuSearchInput">
+                <div class="search"><img src="src/search.svg" alt="search"><input type="text" placeholder="search"
+                        onkeyup="recommend(this)" onfocus="openRecomends()" id="menuSearchInput">
                 </div>
                 <div class="recomends" id="recomends">
 
@@ -62,15 +63,13 @@
             <div class="images" id="images">
 
                 <div class="add" id="add" onclick="openModal()">
-                    <div class="plus">+</div><a>Add city</a></div>
+                    <div class="plus">+</div><a>Add city</a>
+                </div>
 
             </div>
             <div class="weather">
                 <div class="time">
-                    <p class="active">Week</p>
-                    <p>Month</p>
-                    <p>3 Months</p>
-                    <p>6 Months</p>
+                    
 
                 </div>
                 <div class="charts">
@@ -178,9 +177,10 @@
 
         <div class="right">
             <div class="text"><a>Notifications
-                <div class="notification">
-                    <p> 4</p>
-                </div> </a><a>Places</a>
+                    <div class="notification">
+                        <p> 4</p>
+                    </div>
+                </a><a>Places</a>
                 <div class="profile_pic"> <img src="src/profile_pic.jpg" alt="profile picture">
                     <div class="red_dot"></div>
                 </div>

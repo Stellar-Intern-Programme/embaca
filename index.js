@@ -1,3 +1,35 @@
+let weather
+fetch('./weather.json').then(res => res.json()).then(data => {
+    weather = data
+    renderWeather()
+})
+function renderWeather() {
+    let divP = document.querySelector(".time")
+    divP.innerHTML = ""
+    Object.keys(weather).forEach((item) => {
+        let p = document.createElement("p")
+        p.textContent = item
+        divP.appendChild(p)
+        p.addEventListener("click", () => {
+       
+            renderWeatherData(item)
+            const children = divP.children
+           for(let i=0; i<children.length; i++){
+               children[i].className = ""
+           }
+           
+            p.className = "active"
+        })
+    })
+
+}
+
+
+function renderWeatherData() {
+ 
+
+}
+
 let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
 let cityList;
 let activeCity;
@@ -6,6 +38,7 @@ window.addEventListener("load", (event) => {
     cityList = document.getElementById("images");
     redrawCities();
     selectCity(cityArray[0]);
+    renderWeather()
 });
 
 function openModal() {
