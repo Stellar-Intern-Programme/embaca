@@ -11,13 +11,13 @@ function renderWeather() {
         p.textContent = item
         divP.appendChild(p)
         p.addEventListener("click", () => {
-       
+
             renderWeatherData(item)
             const children = divP.children
-           for(let i=0; i<children.length; i++){
-               children[i].className = ""
-           }
-           
+            for (let i = 0; i < children.length; i++) {
+                children[i].className = ""
+            }
+
             p.className = "active"
         })
     })
@@ -25,8 +25,11 @@ function renderWeather() {
 }
 
 
-function renderWeatherData() {
- 
+function renderWeatherData(click) {
+    const data = weather[click]
+    console.log(data)
+    const div = document.createElement("p")
+
 
 }
 
