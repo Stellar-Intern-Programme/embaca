@@ -1,3 +1,14 @@
+let urangutan = ":))";
+function myFunction(){
+    console.log(urangutan)
+     urangutan  = ":(("
+        console.log(urangutan)
+}
+myFunction()
+console.log(urangutan)
+
+
+
 let weather
 fetch('./weather.json').then(res => res.json()).then(data => {
     weather = data
@@ -29,6 +40,10 @@ function renderWeatherData(click) {
     const daysCharts = document.getElementById("charts")
     daysCharts.innerHTML = ""
     const data = weather[click]
+
+
+
+
     const days = data.map(element => element.day)
     const daysDiv = document.createElement("div")
     daysDiv.innerHTML = ""
@@ -39,14 +54,14 @@ function renderWeatherData(click) {
     const rainChance = data.map(element => element.rainChance)
     const rainDiv = document.createElement("div")
     rainDiv.innerHTML = ""
-    rainChance.forEach(rain => rainDiv.innerHTML += `<p>${rain}%</p>`)
-   rainDiv.className = "umidity"
+    rainChance.forEach(rain => rainDiv.innerHTML += `<div class="procent"><img src="src/rain_drop.svg" alt="umidity"><p>${rain}%</p>`)
+    rainDiv.className = "umidity"
     daysCharts.appendChild(rainDiv)
 
     const storm = data.map(element => element.day)
     const stormDiv = document.createElement("div")
     stormDiv.innerHTML = ""
-    days.forEach(daysString => {
+    storm.forEach(daysString => {
         const img = document.createElement("img")
         img.src = "src/storm.svg" 
         img.alt = "storm"
@@ -210,15 +225,22 @@ function search(e) {
     remain.forEach((e) => cityMap(e));
 }
 
-function renderWeatherContent() {
-    const leftCharts = document.getElementById("leftCharts");
-    const chart1 = document.getElementById("chart1")
-    chart1.style.display = "flex";
-    const daysCharts = document.getElementById("daysCHarts");
-    daysCharts.appendChild(p);
-    const p = createElement("p");
-    p.textContent = item
-    const umidity = document.getElementById("umidity");
-    const img = createElement("img");
-    img.setAttribute("src", "src/rain_drop.svg");
+// function renderWeatherContent() {
+//     const leftCharts = document.getElementById("leftCharts");
+//     const chart1 = document.getElementById("chart1")
+//     chart1.style.display = "flex";
+//     const daysCharts = document.getElementById("daysCHarts");
+//     daysCharts.appendChild(p);
+//     const p = createElement("p");
+//     p.textContent = item
+//     const umidity = document.getElementById("umidity");
+//     const img = createElement("img");
+//     img.setAttribute("src", "src/rain_drop.svg");
+// }
+function openPopUs() {
+    const img = document.getElementById("popus");
+    img.style.maxHeight = "100vh";
+    setTimeout (() => {img.style.maxHeight = 0},7000)
+    
+    
 }

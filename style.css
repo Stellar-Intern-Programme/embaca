@@ -54,6 +54,19 @@ body {
     border-radius: 20px;
     overflow: hidden;
 }
+.popus{
+   display: flex;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    max-height: 0vh;
+    height: 100%;
+    transition: all 5s;
+  left: 30vw;
+  background: none;
+  
+}
 
 .modal {
     display: none;
@@ -321,6 +334,17 @@ body {
 .left .weather .charts .procent {
     display: flex;
     padding-bottom: 20px;
+}
+.procent{
+    display: flex;
+    flex-direction: row;
+    
+}
+.umidity{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
 }
 
 .left .weather .charts .storm {
