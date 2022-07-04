@@ -1,4 +1,12 @@
 let weather
+let urangutan = "cosmin"
+function smecher() {
+    console.log(urangutan)
+    urangutan = "emi";
+    console.log(urangutan)
+}
+smecher();
+console.log(urangutan)
 fetch('./weather.json').then(res => res.json()).then(data => {
     weather = data
     renderWeather()
@@ -29,6 +37,9 @@ function renderWeatherData(click) {
     const daysCharts = document.getElementById("charts")
     daysCharts.innerHTML = ""
     const data = weather[click]
+
+
+
     const days = data.map(element => element.day)
     const daysDiv = document.createElement("div")
     daysDiv.innerHTML = ""
@@ -39,14 +50,16 @@ function renderWeatherData(click) {
     const rainChance = data.map(element => element.rainChance)
     const rainDiv = document.createElement("div")
     rainDiv.innerHTML = ""
-    rainChance.forEach(rain => rainDiv.innerHTML += `<p>${rain}%</p>`)
-   rainDiv.className = "umidity"
+    rainChance.forEach(rain => {
+        rainDiv.innerHTML += ` <div class="procent"><img src="src/rain_drop.svg" alt="umidity"><p>${rain}%</p>
+</div>` })
+    rainDiv.className = "umidity"
     daysCharts.appendChild(rainDiv)
 
     const storm = data.map(element => element.day)
     const stormDiv = document.createElement("div")
     stormDiv.innerHTML = ""
-    days.forEach(daysString => {
+    storm.forEach(daysString => {
         const img = document.createElement("img")
         img.src = "src/storm.svg" 
         img.alt = "storm"
@@ -55,23 +68,31 @@ function renderWeatherData(click) {
    stormDiv.className = "storm"
     daysCharts.appendChild(stormDiv)
 
-
-
-
-
-    const minDegrees = data.map(element => element.day)
+    const minDegrees = data.map(element => element.minDegrees)
     const minDiv = document.createElement("div")
-    daysDiv.innerHTML = ""
-    days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
-   daysDiv.className = "days_chart"
-    daysCharts.appendChild(daysDiv)
+    minDiv.innerHTML = ""
+    minDegrees.forEach(minDegreesString => minDiv.innerHTML += `<p>${minDegreesString}</p>`)
+    minDiv.className = "chart_bars"
+    daysCharts.appendChild(minDiv)
 
-    const maxDegrees = data.map(element => element.day)
+    const chartBar = document.createElement("div")
+    chartBar.className = "chart_bar"
+    const filledChartBar = document.createElement("div")
+    filledChartBar.className = "filled_chart_bar"
+    chartBar.appendChild(filledChartBar)
+    daysCharts.appendChild(chartBar)
+
+    const maxDegrees = data.map(element => element.maxDegrees)
     const maxDiv = document.createElement("div")
-    daysDiv.innerHTML = ""
-    days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
-   daysDiv.className = "days_chart"
-    daysCharts.appendChild(daysDiv)
+    maxDiv.innerHTML = ""
+    maxDegrees.forEach(maxDegreesString => maxDiv.innerHTML += `<p>${maxDegreesString}</p>`)
+    maxDiv.className = "chart_bars"
+    daysCharts.appendChild(maxDiv)
+
+
+
+
+
 }
 
 let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
@@ -216,9 +237,14 @@ function renderWeatherContent() {
     chart1.style.display = "flex";
     const daysCharts = document.getElementById("daysCHarts");
     daysCharts.appendChild(p);
-    const p = createElement("p");
+    const p = document.createElement("p");
     p.textContent = item
     const umidity = document.getElementById("umidity");
     const img = createElement("img");
     img.setAttribute("src", "src/rain_drop.svg");
+}
+function amongus() {
+    const img = document.getElementById("img")
+
+    img.style.maxHeight = "100vh";
 }
