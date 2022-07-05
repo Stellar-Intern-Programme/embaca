@@ -339,6 +339,8 @@ body {
 .left .weather .charts .umidity{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
    
 }
 

@@ -49,8 +49,8 @@ function renderWeatherData(click) {
     const rainDiv = document.createElement("div")
     rainDiv.innerHTML = ""
     rainChance.forEach(rain => {
-        rainDiv.innerHTML += ` <div class="procent"><img src="src/rain_drop.svg" alt="umidity"><p>${rain}%</p>
-</div>` })
+        rainDiv.innerHTML += ` <p>${rain}%</p>`
+    })
     rainDiv.className = "umidity"
     daysCharts.appendChild(rainDiv)
 
@@ -122,7 +122,7 @@ window.addEventListener("load", (event) => {
     redrawCities();
     selectCity(cityArray[0]);
     renderWeatherData(Object.keys(weather)[0])
-    searchCity()
+    document.getElementById("menuSearchInput").addEventListener("keyup", searchCity)
 
 });
 
@@ -150,9 +150,9 @@ function submitForm() {
 function redrawCities() {
     const cityList = document.getElementById("images");
     cityList.removeChild = ".another_city"; // sterg ultimul copil (div), ca sa nu imi mai dubleze
-    const addCard = document.querySelector(".add");
-    cityList.innerHTML = "";
-    cityList.appendChild(addCard); //adaug un copil la add
+    // const addCard = document.querySelector(".add");
+    // cityList.innerHTML = "";
+    // cityList.appendChild(addCard); //adaug un copil la add
     cityArray.forEach(cityMap); // aici e for-ul pentru oameni smecheri, care parcurge array-ul prin / cu functia cityMap
 }
 //functia cityMap pentru array-ul city, unde fac div-ul pentru oras cu imaginea si textul si ii dau clasa "another_city"
@@ -199,10 +199,14 @@ function onInputChange(event) {
 }
 const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
 
-function searchCity() {
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=Iasi&APPID=" + API_KEY).then(res => res.json()).then(data => console.log(data))
-
-
+function searchCity(event) {
+    console.log("aici", event.keyCode)
+    if (event.keyCode === 13) {
+        fetch("https://api.openweathermap.org/data/2.5/find?q=Iasi&APPID=" + API_KEY).then(res => res.json()).then(data => {
+            recommend(data)
+    
+    })
+}
 }
 
 function deleteCity() {
@@ -214,7 +218,7 @@ function deleteCity() {
     cityList.children[0].className = "selected_city";
 }
 
-function openRecomends() {
+function openRecomends(data) {
     let recomends = document.getElementById("recomends");
     recomends.style.display = "flex";
 }
@@ -232,19 +236,19 @@ function removeRecommend() {
     recomends.style.display = "none"
 }
 
-function recommend(e) {
-    if (e.value === "") {
-        redrawCities();
-        removeRecommend();
-        return;
-    }
-    console.log(e.value);
-    let v = cityArray.filter((q) => q.cityName.toLowerCase().includes(e.value));
+function recommend(data) {
+    // if (e.value === "") {
+    //     redrawCities();
+    //     removeRecommend();
+    //     return;
+    // }
+    // console.log(e.value);
+    let v =data.list;
     console.log(v);
     let recomends = document.getElementById("recomends");
     recomends.innerHTML = "";
     v.forEach((w) => {
-        recomends.innerHTML += `<p onclick="selectedCityInput(this)">${w.cityName}</p>`;
+        recomends.innerHTML += `<p onclick="selectedCityInput(this)">${w.name}</p>`;
     });
 }
 
