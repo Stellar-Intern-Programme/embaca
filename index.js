@@ -1,8 +1,76 @@
+//import
 let weather
 fetch('./weather.json').then(res => res.json()).then(data => {
     weather = data
     renderWeather();
 })
+
+
+
+const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
+function searchCity() {
+    if
+    fetch(`https://api.openweathermap.org/data/2.5/find?q=${menuSearchInput.value}&APPID=` + API_KEY).then(res => res.json()).then(data => console.log(data))
+}
+//variabile globale
+let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
+let cityList;
+let activeCity;
+//window functions
+window.addEventListener("load", (event) => {
+    //functia asta se apeleaza dupa ce se incarca tot
+    cityList = document.getElementById("images");
+    redrawCities();
+    selectCity(cityArray[0]);
+    renderWeatherData(Object.keys(weather)[0])
+});
+//click function
+function submitForm() {
+    const cityName = document.getElementById("searchInput");
+    const photo = document.getElementById("photoURLinput");
+    cityArray.push({ photo: photo.value, cityName: cityName.value });
+    localStorage.setItem("city", JSON.stringify(cityArray)); //adaug valorile in array
+    closeModal(); //inchid modalul
+    redrawCities(); //adaug un oras nou
+    cityName.value = "";
+    photo.value = "";
+    let background = document.getElementById("background_image");
+    background.style.background = "none";
+    imgContent.style.display = "flex";
+}
+function openModal() {
+    let modal = document.getElementById("modal");
+    modal.style.display = "flex";
+    const inputPhoto = document.getElementById("photoURLinput");
+    inputPhoto.addEventListener("input", onInputChange); // pentru a schimba background-ul dupa ce inserez un URL
+}
+function openPopUs() {
+    const img = document.getElementById("popus");
+    img.style.maxHeight = "100vh";
+    setTimeout(() => { img.style.maxHeight = 0 }, 7000)
+    play();
+}
+function deleteCity() {
+    cityArray = cityArray.filter((city) => city.cityName !== activeCity.cityName);
+    console.log(cityArray, activeCity);
+    localStorage.setItem("city", JSON.stringify(cityArray));
+    redrawCities();
+    selectCity(cityArray[0]);
+    cityList.children[0].className = "selected_city";
+}
+//render functions
+
+
+function search(e) {
+    let remain = cityArray.filter((f) => f.cityName.includes(e.value));
+    console.log(remain);
+    cityList.innerHTML = "";
+
+    // cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
+    // <div class="plus">+</div><a>Add city</a></div>`;
+    remain.forEach((e) => cityMap(e));
+}
+
 
 function renderWeather() {
     let divP = document.querySelector(".time")
@@ -35,8 +103,6 @@ function renderWeatherData(click) {
     const daysCharts = document.getElementById("charts")
     daysCharts.innerHTML = ""
     const data = weather[click]
-
-
 
     const days = data.map(element => element.day)
     const daysDiv = document.createElement("div")
@@ -94,57 +160,12 @@ function renderWeatherData(click) {
     daysCharts.appendChild(chartBar)
     chartBar.className = "chart_bars"
 
-
-
-
-
-
-
     const maxDegrees = data.map(element => element.maxDegrees)
     const maxDiv = document.createElement("div")
     maxDiv.innerHTML = ""
     maxDegrees.forEach(maxDegreesString => maxDiv.innerHTML += `<p>${maxDegreesString}</p>`)
-    maxDiv.className = "chart_bars"
-    daysCharts.appendChild(maxDiv)
-
-
-
-
-
-}
-
-let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
-let cityList;
-let activeCity;
-window.addEventListener("load", (event) => {
-    //functia asta se apeleaza dupa ce se incarca tot
-    cityList = document.getElementById("images");
-    redrawCities();
-    selectCity(cityArray[0]);
-    renderWeatherData(Object.keys(weather)[0])
-    searchCity()
-
-});
-
-function openModal() {
-    let modal = document.getElementById("modal");
-    modal.style.display = "flex";
-    const inputPhoto = document.getElementById("photoURLinput");
-    inputPhoto.addEventListener("input", onInputChange); // pentru a schimba background-ul dupa ce inserez un URL
-}
-
-function submitForm() {
-    const cityName = document.getElementById("searchInput");
-    const photo = document.getElementById("photoURLinput");
-    cityArray.push({ photo: photo.value, cityName: cityName.value });
-    localStorage.setItem("city", JSON.stringify(cityArray)); //adaug valorile in array
-    closeModal(); //inchid modalul
-    redrawCities(); //adaug un oras nou
-    cityName.value = "";
-    photo.value = "";
-    let background = document.getElementById("background_image");
-    background.style.background = "none";
-    imgContent.style.display = "flex";
+    maxDiv.className = "chart_bars";
+    daysCharts.appendChild(maxDiv);
 }
 
 function redrawCities() {
@@ -197,22 +218,6 @@ function onInputChange(event) {
     imgContent.style.display = "none"; //fac sa dispara imaginea de inceput
     console.log(event);
 }
-const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
-
-function searchCity() {
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=Iasi&APPID=" + API_KEY).then(res => res.json()).then(data => console.log(data))
-
-
-}
-
-function deleteCity() {
-    cityArray = cityArray.filter((city) => city.cityName !== activeCity.cityName);
-    console.log(cityArray, activeCity);
-    localStorage.setItem("city", JSON.stringify(cityArray));
-    redrawCities();
-    selectCity(cityArray[0]);
-    cityList.children[0].className = "selected_city";
-}
 
 function openRecomends() {
     let recomends = document.getElementById("recomends");
@@ -248,16 +253,6 @@ function recommend(e) {
     });
 }
 
-function search(e) {
-    let remain = cityArray.filter((f) => f.cityName.includes(e.value));
-    console.log(remain);
-    cityList.innerHTML = "";
-
-    // cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
-    // <div class="plus">+</div><a>Add city</a></div>`;
-    remain.forEach((e) => cityMap(e));
-}
-
 function renderWeatherContent() {
     const leftCharts = document.getElementById("leftCharts");
     const chart1 = document.getElementById("chart1")
@@ -270,12 +265,7 @@ function renderWeatherContent() {
     const img = createElement("img");
     img.setAttribute("src", "src/rain_drop.svg");
 }
-function openPopUs() {
-    const img = document.getElementById("popus");
-    img.style.maxHeight = "100vh";
-    setTimeout(() => { img.style.maxHeight = 0 }, 7000)
-    play();
-}
+
 function play() {
     var audio = document.getElementById("audio");
     audio.play();
