@@ -54,6 +54,19 @@ body {
     border-radius: 20px;
     overflow: hidden;
 }
+.popus{
+   display: flex;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    max-height: 0vh;
+    height: 100%;
+    transition: all 5s;
+  left: 30vw;
+  background: none;
+  
+}
 
 .modal {
     display: none;
@@ -337,6 +350,15 @@ body {
     display: flex;
     padding-bottom: 20px;
 }
+.procent{
+    display: flex;
+    flex-direction: row;
+    
+}
+.umidity{
+    display: flex;
+    flex-direction: column;
+}
 
 .left .weather .charts .storm {
     display: flex;
@@ -355,8 +377,7 @@ body {
 
 .left .weather .charts .chart1 {
     display: flex;
-    gap: 10px;
-    padding-bottom: 20px;
+    
 }
 
 .left .weather .charts .chart_bar {
@@ -371,7 +392,7 @@ body {
     height: 9px;
     background-color: #EA3B3B;
     position: absolute;
-    left: 45%;
+    left: 0;
     border-radius: 5px;
     position: relative;
 }

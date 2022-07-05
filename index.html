@@ -16,6 +16,8 @@
 
 <body>
     <div class="amongus"><img id="img" src="src/amongus.png" alt="sus"></div>
+   <img src= "src/susy boy.gif" alt="amongus" class="popus" id="popus">
+
     <div class="modal" id="modal">
         <div class="popup_box">
             <input type="text" class="search" id="searchInput" placeholder="     City Name">
@@ -36,7 +38,7 @@
         <div class="left">
 
             <div class="menu">
-                <div class="search"><img src="src/search.svg" alt="search"><input type="text" placeholder="search"
+                <div class="search"><img onclick="search()" src="src/search.svg" alt="search"><input type="text" placeholder="search"
                         onkeyup="recommend(this)" onfocus="openRecomends()" id="menuSearchInput">
                 </div>
                 <div class="recomends" id="recomends">
@@ -182,7 +184,7 @@
                         <p> 4</p>
                     </div>
                 </a><a>Places</a>
-                <div class="profile_pic" onclick="amongus()"> <img  src="src/profile_pic.jpg" alt="profile picture">
+                <div class="profile_pic" id = "profile_pic"  onclick=openPopUs()> <audio id="audio" src="src/amogus.mp3"></audio> <img src="src/profile_pic.jpg" alt="profile picture">
                     <div class="red_dot"></div>
                 </div>
 

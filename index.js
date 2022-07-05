@@ -1,15 +1,14 @@
-let weather
-let urangutan = "cosmin"
-function smecher() {
-    console.log(urangutan)
-    urangutan = "emi";
-    console.log(urangutan)
+const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
+
+function searchCity() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=Iasi&APPID=" + API_KEY).then(res => res.json()).then(data => console.log(data))
+
+
 }
-smecher();
-console.log(urangutan)
+let weather;
 fetch('./weather.json').then(res => res.json()).then(data => {
     weather = data
-    renderWeather()
+    renderWeather();
 })
 function renderWeather() {
     let divP = document.querySelector(".time")
@@ -33,7 +32,7 @@ function renderWeather() {
 }
 
 
-function renderWeatherData(click) { 
+function renderWeatherData(click) {
     const daysCharts = document.getElementById("charts")
     daysCharts.innerHTML = ""
     const data = weather[click]
@@ -44,7 +43,7 @@ function renderWeatherData(click) {
     const daysDiv = document.createElement("div")
     daysDiv.innerHTML = ""
     days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
-   daysDiv.className = "days_chart"
+    daysDiv.className = "days_chart"
     daysCharts.appendChild(daysDiv)
 
     const rainChance = data.map(element => element.rainChance)
@@ -61,11 +60,11 @@ function renderWeatherData(click) {
     stormDiv.innerHTML = ""
     storm.forEach(daysString => {
         const img = document.createElement("img")
-        img.src = "src/storm.svg" 
+        img.src = "src/storm.svg"
         img.alt = "storm"
         stormDiv.appendChild(img)
     })
-   stormDiv.className = "storm"
+    stormDiv.className = "storm"
     daysCharts.appendChild(stormDiv)
 
     const minDegrees = data.map(element => element.minDegrees)
@@ -75,12 +74,32 @@ function renderWeatherData(click) {
     minDiv.className = "chart_bars"
     daysCharts.appendChild(minDiv)
 
+
+    const charts = data.map(e => e.minDegrees)
     const chartBar = document.createElement("div")
-    chartBar.className = "chart_bar"
-    const filledChartBar = document.createElement("div")
-    filledChartBar.className = "filled_chart_bar"
-    chartBar.appendChild(filledChartBar)
+    chartBar.innerHTML = "";
+    charts.forEach(minDegreesString => {
+        const chartDiv = document.createElement("div")
+
+        chartDiv.style.paddingBottom = "3px"
+        const chartBar1 = document.createElement("div")
+        chartBar1.className = "chart_bar"
+        const filledChartBar = document.createElement("div")
+        filledChartBar.className = "filled_chart_bar";
+        filledChartBar.style.width = `${minDegreesString * 3 + 6}%`
+        chartDiv.appendChild(chartBar1)
+        chartBar1.appendChild(filledChartBar)
+        chartBar.appendChild(chartDiv)
+
+    })
     daysCharts.appendChild(chartBar)
+    chartBar.className = "chart_bars"
+
+
+
+
+
+
 
     const maxDegrees = data.map(element => element.maxDegrees)
     const maxDiv = document.createElement("div")
@@ -200,7 +219,6 @@ function selectedCityInput(element) {
     removeRecommend();
     search(cityName);
 }
-
 function removeRecommend() {
     let recomends = document.getElementById("recomends");
     recomends.style.display = "none";
@@ -226,8 +244,7 @@ function search(e) {
     let remain = cityArray.filter((f) => f.cityName.includes(e.value));
     console.log(remain);
     cityList.innerHTML = "";
-    cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
-    <div class="plus">+</div><a>Add city</a></div>`;
+
     remain.forEach((e) => cityMap(e));
 }
 
@@ -243,8 +260,13 @@ function renderWeatherContent() {
     const img = createElement("img");
     img.setAttribute("src", "src/rain_drop.svg");
 }
-function amongus() {
-    const img = document.getElementById("img")
-
+function openPopUs() {
+    const img = document.getElementById("popus");
     img.style.maxHeight = "100vh";
+    setTimeout(() => { img.style.maxHeight = 0 }, 7000)
+    play();
+}
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
 }
