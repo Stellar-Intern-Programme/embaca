@@ -11,9 +11,9 @@ function renderWeather() {
         let p = document.createElement("p")
         p.textContent = item
         divP.appendChild(p)
-        if(key === 0){  
+        if (key === 0) {
             p.classList = "active"
-          }
+        }
         p.addEventListener("click", () => {
 
             renderWeatherData(item)
@@ -22,8 +22,8 @@ function renderWeather() {
                 children[i].className = ""
             }
             p.className = "active"
-            
-            
+
+
 
         })
     })
@@ -91,7 +91,8 @@ window.addEventListener("load", (event) => {
     redrawCities();
     selectCity(cityArray[0]);
     renderWeatherData(Object.keys(weather)[0])
-   
+    searchCity()
+
 });
 
 function openModal() {
@@ -165,6 +166,13 @@ function onInputChange(event) {
     imgContent.style.display = "none"; //fac sa dispara imaginea de inceput
     console.log(event);
 }
+const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
+
+function searchCity() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=Iasi&APPID=" + API_KEY).then(res => res.json()).then(data => console.log(data))
+
+
+}
 
 function deleteCity() {
     cityArray = cityArray.filter((city) => city.cityName !== activeCity.cityName);
@@ -214,8 +222,8 @@ function search(e) {
     let remain = cityArray.filter((f) => f.cityName.includes(e.value));
     console.log(remain);
     cityList.innerHTML = "";
-    cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
-    <div class="plus">+</div><a>Add city</a></div>`;
+    // cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
+    // <div class="plus">+</div><a>Add city</a></div>`;
     remain.forEach((e) => cityMap(e));
 }
 
