@@ -1,26 +1,19 @@
-let urangutan = ":))";
-function myFunction(){
-    console.log(urangutan)
-     urangutan  = ":(("
-        console.log(urangutan)
-}
-myFunction()
-console.log(urangutan)
-
-
-
 let weather
 fetch('./weather.json').then(res => res.json()).then(data => {
     weather = data
     renderWeather()
 })
+
 function renderWeather() {
     let divP = document.querySelector(".time")
     divP.innerHTML = ""
-    Object.keys(weather).forEach((item) => {
+    Object.keys(weather).forEach((item, key) => {
         let p = document.createElement("p")
         p.textContent = item
         divP.appendChild(p)
+        if(key === 0){  
+            p.classList = "active"
+          }
         p.addEventListener("click", () => {
 
             renderWeatherData(item)
@@ -28,15 +21,16 @@ function renderWeather() {
             for (let i = 0; i < children.length; i++) {
                 children[i].className = ""
             }
-
             p.className = "active"
+            
+            
+
         })
     })
 
 }
 
-
-function renderWeatherData(click) { 
+function renderWeatherData(click) {
     const daysCharts = document.getElementById("charts")
     daysCharts.innerHTML = ""
     const data = weather[click]
@@ -48,7 +42,7 @@ function renderWeatherData(click) {
     const daysDiv = document.createElement("div")
     daysDiv.innerHTML = ""
     days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
-   daysDiv.className = "days_chart"
+    daysDiv.className = "days_chart"
     daysCharts.appendChild(daysDiv)
 
     const rainChance = data.map(element => element.rainChance)
@@ -63,13 +57,12 @@ function renderWeatherData(click) {
     stormDiv.innerHTML = ""
     storm.forEach(daysString => {
         const img = document.createElement("img")
-        img.src = "src/storm.svg" 
+        img.src = "src/storm.svg"
         img.alt = "storm"
         stormDiv.appendChild(img)
     })
-   stormDiv.className = "storm"
+    stormDiv.className = "storm"
     daysCharts.appendChild(stormDiv)
-
 
 
 
@@ -78,14 +71,14 @@ function renderWeatherData(click) {
     const minDiv = document.createElement("div")
     daysDiv.innerHTML = ""
     days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
-   daysDiv.className = "days_chart"
+    daysDiv.className = "days_chart"
     daysCharts.appendChild(daysDiv)
 
     const maxDegrees = data.map(element => element.day)
     const maxDiv = document.createElement("div")
     daysDiv.innerHTML = ""
     days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
-   daysDiv.className = "days_chart"
+    daysDiv.className = "days_chart"
     daysCharts.appendChild(daysDiv)
 }
 
@@ -97,7 +90,8 @@ window.addEventListener("load", (event) => {
     cityList = document.getElementById("images");
     redrawCities();
     selectCity(cityArray[0]);
-    renderWeather()
+    renderWeatherData(Object.keys(weather)[0])
+   
 });
 
 function openModal() {
@@ -197,7 +191,7 @@ function selectedCityInput(element) {
 
 function removeRecommend() {
     let recomends = document.getElementById("recomends");
-    recomends.style.display = "none";
+    recomends.style.display = "none"
 }
 
 function recommend(e) {
@@ -225,22 +219,22 @@ function search(e) {
     remain.forEach((e) => cityMap(e));
 }
 
-// function renderWeatherContent() {
-//     const leftCharts = document.getElementById("leftCharts");
-//     const chart1 = document.getElementById("chart1")
-//     chart1.style.display = "flex";
-//     const daysCharts = document.getElementById("daysCHarts");
-//     daysCharts.appendChild(p);
-//     const p = createElement("p");
-//     p.textContent = item
-//     const umidity = document.getElementById("umidity");
-//     const img = createElement("img");
-//     img.setAttribute("src", "src/rain_drop.svg");
-// }
+function renderWeatherContent() {
+    const leftCharts = document.getElementById("leftCharts");
+    const chart1 = document.getElementById("chart1")
+    chart1.style.display = "flex";
+    const daysCharts = document.getElementById("daysCHarts");
+    daysCharts.appendChild(p);
+    const p = createElement("p");
+    p.textContent = item
+    const umidity = document.getElementById("umidity");
+    const img = createElement("img");
+    img.setAttribute("src", "src/rain_drop.svg");
+}
 function openPopUs() {
     const img = document.getElementById("popus");
     img.style.maxHeight = "100vh";
-    setTimeout (() => {img.style.maxHeight = 0},7000)
-    
-    
+    setTimeout(() => { img.style.maxHeight = 0 }, 7000)
+
+
 }
