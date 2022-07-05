@@ -1,22 +1,19 @@
-const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
-
-function searchCity() {
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=Iasi&APPID=" + API_KEY).then(res => res.json()).then(data => console.log(data))
-
-
-}
-let weather;
+let weather
 fetch('./weather.json').then(res => res.json()).then(data => {
     weather = data
     renderWeather();
 })
+
 function renderWeather() {
     let divP = document.querySelector(".time")
     divP.innerHTML = ""
-    Object.keys(weather).forEach((item) => {
+    Object.keys(weather).forEach((item, key) => {
         let p = document.createElement("p")
         p.textContent = item
         divP.appendChild(p)
+        if (key === 0) {
+            p.classList = "active"
+        }
         p.addEventListener("click", () => {
 
             renderWeatherData(item)
@@ -24,8 +21,10 @@ function renderWeather() {
             for (let i = 0; i < children.length; i++) {
                 children[i].className = ""
             }
-
             p.className = "active"
+
+
+
         })
     })
 
@@ -122,7 +121,9 @@ window.addEventListener("load", (event) => {
     cityList = document.getElementById("images");
     redrawCities();
     selectCity(cityArray[0]);
-    renderWeather()
+    renderWeatherData(Object.keys(weather)[0])
+    searchCity()
+
 });
 
 function openModal() {
@@ -196,6 +197,13 @@ function onInputChange(event) {
     imgContent.style.display = "none"; //fac sa dispara imaginea de inceput
     console.log(event);
 }
+const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
+
+function searchCity() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=Iasi&APPID=" + API_KEY).then(res => res.json()).then(data => console.log(data))
+
+
+}
 
 function deleteCity() {
     cityArray = cityArray.filter((city) => city.cityName !== activeCity.cityName);
@@ -221,7 +229,7 @@ function selectedCityInput(element) {
 }
 function removeRecommend() {
     let recomends = document.getElementById("recomends");
-    recomends.style.display = "none";
+    recomends.style.display = "none"
 }
 
 function recommend(e) {
@@ -245,6 +253,8 @@ function search(e) {
     console.log(remain);
     cityList.innerHTML = "";
 
+    // cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
+    // <div class="plus">+</div><a>Add city</a></div>`;
     remain.forEach((e) => cityMap(e));
 }
 
