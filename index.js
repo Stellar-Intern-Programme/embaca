@@ -8,10 +8,7 @@ fetch('./weather.json').then(res => res.json()).then(data => {
 
 
 const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
-function searchCity() {
-    if
-    fetch(`https://api.openweathermap.org/data/2.5/find?q=${menuSearchInput.value}&APPID=` + API_KEY).then(res => res.json()).then(data => console.log(data))
-}
+
 //variabile globale
 let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
 let cityList;
@@ -115,8 +112,8 @@ function renderWeatherData(click) {
     const rainDiv = document.createElement("div")
     rainDiv.innerHTML = ""
     rainChance.forEach(rain => {
-        rainDiv.innerHTML += ` <div class="procent"><img src="src/rain_drop.svg" alt="umidity"><p>${rain}%</p>
-</div>` })
+        rainDiv.innerHTML += ` <p>${rain}%</p>`
+    })
     rainDiv.className = "umidity"
     daysCharts.appendChild(rainDiv)
 
@@ -164,16 +161,52 @@ function renderWeatherData(click) {
     const maxDiv = document.createElement("div")
     maxDiv.innerHTML = ""
     maxDegrees.forEach(maxDegreesString => maxDiv.innerHTML += `<p>${maxDegreesString}</p>`)
-    maxDiv.className = "chart_bars";
-    daysCharts.appendChild(maxDiv);
+    maxDiv.className = "chart_bars"
+    daysCharts.appendChild(maxDiv)
+
+
+
+
+
+}
+
+window.addEventListener("load", (event) => {
+    //functia asta se apeleaza dupa ce se incarca tot
+    cityList = document.getElementById("images");
+    redrawCities();
+    selectCity(cityArray[0]);
+    renderWeatherData(Object.keys(weather)[0])
+    document.getElementById("menuSearchInput").addEventListener("keyup", searchCity)
+
+});
+
+function openModal() {
+    let modal = document.getElementById("modal");
+    modal.style.display = "flex";
+    const inputPhoto = document.getElementById("photoURLinput");
+    inputPhoto.addEventListener("input", onInputChange); // pentru a schimba background-ul dupa ce inserez un URL
+}
+
+function submitForm() {
+    const cityName = document.getElementById("searchInput");
+    const photo = document.getElementById("photoURLinput");
+    cityArray.push({ photo: photo.value, cityName: cityName.value });
+    localStorage.setItem("city", JSON.stringify(cityArray)); //adaug valorile in array
+    closeModal(); //inchid modalul
+    redrawCities(); //adaug un oras nou
+    cityName.value = "";
+    photo.value = "";
+    let background = document.getElementById("background_image");
+    background.style.background = "none";
+    imgContent.style.display = "flex";
 }
 
 function redrawCities() {
     const cityList = document.getElementById("images");
     cityList.removeChild = ".another_city"; // sterg ultimul copil (div), ca sa nu imi mai dubleze
-    const addCard = document.querySelector(".add");
-    cityList.innerHTML = "";
-    cityList.appendChild(addCard); //adaug un copil la add
+    // const addCard = document.querySelector(".add");
+    // cityList.innerHTML = "";
+    // cityList.appendChild(addCard); //adaug un copil la add
     cityArray.forEach(cityMap); // aici e for-ul pentru oameni smecheri, care parcurge array-ul prin / cu functia cityMap
 }
 //functia cityMap pentru array-ul city, unde fac div-ul pentru oras cu imaginea si textul si ii dau clasa "another_city"
@@ -219,9 +252,31 @@ function onInputChange(event) {
     console.log(event);
 }
 
-function openRecomends() {
+function searchCity(event) {
+    console.log("aici", event.keyCode)
+    if (event.keyCode === 13) {
+        const value = document.getElementById("menuSearchInput").value
+        fetch("https://api.openweathermap.org/data/2.5/find?q=" + value + "&APPID=" + API_KEY).then(res => res.json()).then(data => {
+            recommend(data)
+
+        })
+    }
+}
+
+function deleteCity() {
+    cityArray = cityArray.filter((city) => city.cityName !== activeCity.cityName);
+    console.log(cityArray, activeCity);
+    localStorage.setItem("city", JSON.stringify(cityArray));
+    redrawCities();
+    selectCity(cityArray[0]);
+    cityList.children[0].className = "selected_city";
+}
+
+function openRecomends(data) {
+    const cityName = document.getElementById("menuSearchInput").value;
     let recomends = document.getElementById("recomends");
     recomends.style.display = "flex";
+    if (cityName == "") { removeRecommend() }
 }
 
 function selectedCityInput(element) {
@@ -237,19 +292,19 @@ function removeRecommend() {
     recomends.style.display = "none"
 }
 
-function recommend(e) {
-    if (e.value === "") {
-        redrawCities();
-        removeRecommend();
-        return;
-    }
-    console.log(e.value);
-    let v = cityArray.filter((q) => q.cityName.toLowerCase().includes(e.value));
+function recommend(data) {
+    // if (e.value === "") {
+    //     redrawCities();
+    //     removeRecommend();
+    //     return;
+    // }
+    // console.log(e.value);
+    let v = data.list;
     console.log(v);
     let recomends = document.getElementById("recomends");
     recomends.innerHTML = "";
     v.forEach((w) => {
-        recomends.innerHTML += `<p onclick="selectedCityInput(this)">${w.cityName}</p>`;
+        recomends.innerHTML += `<p onclick="selectedCityInput(this)">${w.name}</p>`;
     });
 }
 
