@@ -76,15 +76,15 @@ body {
   justify-content: center;
   align-items: center;
 }
-.amongus img{
-    position: absolute;
-    display: flex;
-    max-height: 0vh;
-    height: 100%;
-    transition: all 5s;
-    z-index: 4;
-    left: 0;
-    top: 0;
+.amongus img {
+  position: absolute;
+  display: flex;
+  max-height: 0vh;
+  height: 100%;
+  transition: all 5s;
+  z-index: 4;
+  left: 0;
+  top: 0;
 }
 
 .modal .popup_box {
@@ -250,7 +250,15 @@ body {
 .left .text {
   font-size: 35px;
 }
-
+.gif{
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+.gif-visible{
+  display: block;
+}
 .left .images {
   display: flex;
   gap: 40px;
@@ -260,7 +268,7 @@ body {
   flex-shrink: 0;
   overflow: scroll;
   overflow-y: hidden;
-  height: 260px;
+  height: 230px;
 }
 
 .left .images img {
@@ -336,12 +344,11 @@ body {
 .left .weather .charts .days_chart p {
   padding-bottom: 20px;
 }
-.left .weather .charts .umidity{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 20px;
-   
+.left .weather .charts .umidity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .left .weather .charts .procent {
@@ -352,9 +359,9 @@ body {
   display: flex;
   flex-direction: row;
 }
-.umidity{
-    display: flex;
-    flex-direction: column;
+.umidity {
+  display: flex;
+  flex-direction: column;
 }
 
 .left .weather .charts .storm {
@@ -367,31 +374,30 @@ body {
 }
 
 .left .weather .charts .chart_bars {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .left .weather .charts .chart1 {
-    display: flex;
-    
+  display: flex;
 }
 
 .left .weather .charts .chart_bar {
-    background-color: #D9D9D9;
-    width: 214px;
-    height: 9px;
-    border-radius: 5px;
+  background-color: #d9d9d9;
+  width: 214px;
+  height: 9px;
+  border-radius: 5px;
 }
 
 .left .weather .charts .chart_bar .filled_chart_bar {
-    width: 70px;
-    height: 9px;
-    background-color: #EA3B3B;
-    position: absolute;
-    left: 0;
-    border-radius: 5px;
-    position: relative;
+  width: 70px;
+  height: 9px;
+  background-color: #ea3b3b;
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+  position: relative;
 }
 
 .right {

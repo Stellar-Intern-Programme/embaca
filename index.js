@@ -67,8 +67,8 @@ function search(e) {
 
 
 function renderWeather() {
-    let divP = document.querySelector(".time")
-    divP.innerHTML = ""
+    // let divP = document.querySelector(".time")
+    // divP.innerHTML = ""
     Object.keys(weather).forEach((item, key) => {
         let p = document.createElement("p")
         p.textContent = item
