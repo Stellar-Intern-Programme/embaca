@@ -5,6 +5,8 @@ fetch('./weather.json').then(res => res.json()).then(data => {
     renderWeather();
 })
 
+const weekDays = ['Sun', 'Mon', "Tue", "Wed","Thu", "Fri", "Sat"]
+const yearMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] 
 
 
 const API_KEY = "db94f9a8947af9eaed69ffec96319ded"
@@ -21,6 +23,14 @@ window.addEventListener("load", (event) => {
     selectCity(cityArray[0]);
     // renderWeatherData(Object.keys(weather)[0])
     document.getElementById("menuSearchInput").addEventListener("keyup", searchCity)
+    const date = new Date()
+    let day = date.getDay()
+    let pDate = document.getElementById("date")
+    let dateNr = date.getDate()
+    let month = date.getMonth()
+pDate.innerText = `${weekDays[day]}, ${dateNr} ${yearMonth[month]} `
+
+    
 });
 //click function
 function submitForm(name) {
@@ -178,7 +188,7 @@ function redrawCities() {
     const cityList = document.getElementById("images");
     cityList.removeChild = ".another_city"; // sterg ultimul copil (div), ca sa nu imi mai dubleze
     // const addCard = document.querySelector(".add");
-    cityList.innerHTML = "";
+        cityList.innerHTML = "";
     // cityList.appendChild(addCard); //adaug un copil la add
     cityArray.forEach(cityMap); // aici e for-ul pentru oameni smecheri, care parcurge array-ul prin / cu functia cityMap
 }
@@ -270,6 +280,18 @@ function selectedCityInput(coord, name) {
         feelsLike.innerHTML = "";
         feelsLike.innerText = `${Math.floor(data.current.feels_like - 273)}°C`
         submitForm(name)
+        if(data.current.weather[0].main === "Clear"){
+            
+        let sunny = document.getElementById("sunny")
+        sunny.classList.add("sunny-visible")
+        rainy.classList.remove("rainy-visible")
+        }
+        else
+        {
+            let rainy = document.getElementById("rainy")
+            rainy.classList.add("rainy-visible")
+            sunny.classList.remove("sunny-visible")
+        }
     })
 
 }
