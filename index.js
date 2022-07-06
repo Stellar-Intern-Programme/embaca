@@ -276,6 +276,7 @@ function openRecomends(data) {
     const cityName = document.getElementById("menuSearchInput").value;
     let recomends = document.getElementById("recomends");
     recomends.style.display = "flex";
+    if (cityName == "") { removeRecommend() }
 }
 
 function selectedCityInput(element) {
