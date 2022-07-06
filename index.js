@@ -7,7 +7,7 @@ fetch('./weather.json').then(res => res.json()).then(data => {
 
 
 
-const API_KEY = "7e8889844b730f765a9bb5d4b0a15698"
+const API_KEY = "db94f9a8947af9eaed69ffec96319ded"
 
 //variabile globale
 let cityArray = JSON.parse(localStorage.getItem("city")) || []; //se salveaza in local storeage
@@ -62,9 +62,6 @@ function search(e) {
     let remain = cityArray.filter((f) => f.cityName.includes(e.value));
     console.log(remain);
     cityList.innerHTML = "";
-
-    // cityList.innerHTML = `<div class="add" id="add" onclick="openModal()">
-    // <div class="plus">+</div><a>Add city</a></div>`;
     remain.forEach((e) => cityMap(e));
 }
 
@@ -259,6 +256,7 @@ function searchCity(event) {
         fetch("https://api.openweathermap.org/data/2.5/find?q=" + value + "&APPID=" + API_KEY).then(res => res.json()).then(data => {
             recommend(data)
 
+
         })
     }
 }
@@ -276,16 +274,22 @@ function openRecomends(data) {
     const cityName = document.getElementById("menuSearchInput").value;
     let recomends = document.getElementById("recomends");
     recomends.style.display = "flex";
-    if (cityName == "") { removeRecommend() }
 }
 
-function selectedCityInput(element) {
+function selectedCityInput(coord) {
+    console.log(coord)
     const cityName = document.getElementById("menuSearchInput");
-    console.log(cityName);
-    cityName.value = element.innerText;
-    console.log(element.innerText);
-    removeRecommend();
-    search(cityName);
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&APPID=${API_KEY}`).then(result => result.json()).then(data => {
+        console.log(data);
+        removeRecommend();
+        const currentTemp = document.getElementById("currentTemp");
+        currentTemp.innerHTML = ""
+        currentTemp.innerText = Math.floor(data.current.temp - 273)
+        const feelsLike = document.getElementById("feelsLike")
+        feelsLike.innerHTML = "";
+        feelsLike.innerText = `${Math.floor(data.current.feels_like - 273)}°C`
+    })
+
 }
 function removeRecommend() {
     let recomends = document.getElementById("recomends");
@@ -299,12 +303,16 @@ function recommend(data) {
     //     return;
     // }
     // console.log(e.value);
+
     let v = data.list;
     console.log(v);
     let recomends = document.getElementById("recomends");
     recomends.innerHTML = "";
     v.forEach((w) => {
-        recomends.innerHTML += `<p onclick="selectedCityInput(this)">${w.name}</p>`;
+        const recommendP = document.createElement("p");
+        recommendP.addEventListener("click", () => { selectedCityInput(w.coord) })
+        recommendP.innerText = w.name;
+        recomends.appendChild(recommendP)
     });
 }
 
