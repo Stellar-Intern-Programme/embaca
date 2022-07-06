@@ -832,3 +832,6 @@ body {
     width: 10px;
   }
 }
+.invisible{
+  display: none;
+}

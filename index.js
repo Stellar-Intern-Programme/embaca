@@ -251,7 +251,17 @@ function openRecomends(data) {
 
 function selectedCityInput(coord, name) {
     const cityName = document.getElementById("menuSearchInput");
+    const gif = document.getElementById("_gif")
+    gif.classList.add("gif-visible")
+    const curentTemp = document.getElementById("currentTemp")
+    const celsius = document.getElementById("celsius")
+    curentTemp.classList.add("invisible")
+    celsius.classList.add("invisible")
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&APPID=${API_KEY}`).then(result => result.json()).then(data => {
+        gif.classList.remove("gif-visible")
+        curentTemp.classList.remove("invisible")
+        celsius.classList.remove("invisible")
+        console.log(data);
         removeRecommend();
         const currentTemp = document.getElementById("currentTemp");
         currentTemp.innerHTML = ""
@@ -304,3 +314,4 @@ function play() {
     var audio = document.getElementById("audio");
     audio.play();
 }
+
