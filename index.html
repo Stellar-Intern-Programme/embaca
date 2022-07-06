@@ -16,7 +16,7 @@
 
 <body>
     <div class="amongus"><img id="img" src="src/amongus.png" alt="sus"></div>
-   <img src= "src/susy boy.gif" alt="amongus" class="popus" id="popus">
+    <img src="src/susy boy.gif" alt="amongus" class="popus" id="popus">
 
     <div class="modal" id="modal">
         <div class="popup_box">
@@ -38,8 +38,8 @@
         <div class="left">
 
             <div class="menu">
-                <div class="search"><img onclick="search()" src="src/search.svg" alt="search"><input type="text" placeholder="search"
-                        onfocus="openRecomends()" id="menuSearchInput">
+                <div class="search"><img onclick="search()" src="src/search.svg" alt="search"><input type="text"
+                        placeholder="search" autocomplete="off" onfocus="openRecomends()" id="menuSearchInput">
                 </div>
                 <div class="recomends" id="recomends">
 
@@ -65,192 +65,103 @@
             </div>
             <div class="images" id="images">
                 <div class="add" id="add" onclick="openModal()">
-                    <div class="plus">+</div><a>Add city</a></div>
-            
+                    <div class="plus">+</div><a>Add city</a>
+                </div>
+
 
             </div>
             <div class="weather">
                 <div class="time">
+                    <p>Minutly</p>
+                    <p>Hourly</p>
+                    <p>Daily</p>
+                         </div>
+                        <div id="charts" class="charts">
 
-
-                </div>
-                <div id="charts" class="charts">
-                    <!--  <div class="days_chart">
-                        <p>Monday</p>
-                        <p>Tuesday</p>
-                        <p>Wednesday</p>
-                        <p>Thursday</p>
-                        <p>Friday</p>
-                        <p>Saturday</p>
-                        <p>Sunday</p>
-                    </div>
-                    <div class="umidity" id="umidity">
-                        <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
-                            <p>50%</p>
                         </div>
-                        <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
-                            <p>50%</p>
-                        </div>
-                        <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
-                            <p>50%</p>
-                        </div>
-                        <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
-                            <p>50%</p>
-                        </div>
-                        <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
-                            <p>50%</p>
-                        </div>
-                        <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
-                            <p>50%</p>
-                        </div>
-                        <div class="procent"><img src="src/rain_drop.svg" alt="umidity">
-                            <p>50%</p>
-                        </div>
-                    </div>
-                    <div class="storm" id="storm">
-                        <img src="src/storm.svg" alt="storm">
-                        <img src="src/storm.svg" alt="storm">
-                        <img src="src/storm.svg" alt="storm">
-                        <img src="src/storm.svg" alt="storm">
-                        <img src="src/storm.svg" alt="storm">
-                        <img src="src/storm.svg" alt="storm">
-                        <img src="src/storm.svg" alt="storm">
-
-                    </div>
-                    <div class="chart_bars" id="chartBars">
-                        <div class="chart1" id="chart1">
-                            <p>17°C</p>
-                            <div class="chart_bar" id="chartBar">
-                                <div class="filled_chart_bar" id="filledChartBar"></div>
-                            </div>
-                            <p>26°C</p>
-                        </div>
-                        <div class="chart1">
-                            <p>17°C</p>
-                            <div class="chart_bar">
-                                <div class="filled_chart_bar"></div>
-                            </div>
-                            <p>26°C</p>
-                        </div>
-                        <div class="chart1">
-                            <p>17°C</p>
-                            <div class="chart_bar">
-                                <div class="filled_chart_bar"></div>
-                            </div>
-                            <p>26°C</p>
-                        </div>
-                        <div class="chart1">
-                            <p>17°C</p>
-                            <div class="chart_bar">
-                                <div class="filled_chart_bar"></div>
-                            </div>
-                            <p>26°C</p>
-                        </div>
-                        <div class="chart1">
-                            <p>17°C</p>
-                            <div class="chart_bar">
-                                <div class="filled_chart_bar"></div>
-                            </div>
-                            <p>26°C</p>
-                        </div>
-                        <div class="chart1">
-                            <p>17°C</p>
-                            <div class="chart_bar">
-                                <div class="filled_chart_bar"></div>
-                            </div>
-                            <p>26°C</p>
-                        </div>
-                        <div class="chart1">
-                            <p>17°C</p>
-                            <div class="chart_bar">
-                                <div class="filled_chart_bar"></div>
-                            </div>
-                            <p>26°C</p>
-                        </div>
-                    </div>-->
 
                 </div>
+
             </div>
+
+
+
+            <div class="right">
+                <div class="text"><a>Notifications
+                        <div class="notification">
+                            <p> 4</p>
+                        </div>
+                    </a><a>Places</a>
+                    <div class="profile_pic" id="profile_pic" onclick=openPopUs()> <audio id="audio"
+                            src="src/amogus.mp3"></audio> <img src="src/profile_pic.jpg" alt="profile picture">
+                        <div class="red_dot"></div>
+                    </div>
+
+                </div>
+                <div class="weather">
+                    <div class="temperature">
+                        <img src="src/rain.svg" alt="rain">
+                        <div class="day">
+                            <h3>Today</h3>
+                            <p>Sat, 3 Aug</p>
+                        </div>
+                    </div>
+                    <div class="grades">
+                        <h1>30</h1>
+                        <p>°C</p>
+                        <img src="src/loading1.gif" alt="gif" class ="gif">
+                    </div>
+                    <div class="location">
+                        <div class="remove_container">
+                            <p id="location"></p>
+                            <div class="trash" onclick="deleteCity()"><img src="src/trash.svg" alt="delete"></div>
+                        </div>
+                        <p>Feels like 34 &nbsp; ⬤ &nbsp; Sunset 20:15</p>
+                    </div>
+                    <div class="charts">
+                        <div class="bigtext">
+                            <div class="chance">
+                                <h3>Chance of rain</h3>
+                            </div>
+                            <div class="text">
+
+                                <p>sunny</p>
+                                <p>rainy</p>
+                                <p>heavy rain</p>
+                            </div>
+                        </div>
+
+                        <div class="lines">
+                            <div class="chart1">
+                                <div class="line1"></div>
+                                <p>12</p>
+                            </div>
+                            <div class="chart2">
+                                <div class="line2"></div>
+                                <p>14</p>
+                            </div>
+                            <div class="chart3">
+                                <div class="line3"></div>
+                                <p>16</p>
+                            </div>
+                            <div class="chart4">
+                                <div class="line4"></div>
+                                <p>16</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <img src="src/Vector.png" alt="cloud" class="background">
+                <img src="src/Vector.png" alt="cloud" class="background2">
+            </div>
+
 
 
         </div>
-
-
-
-        <div class="right">
-            <div class="text"><a>Notifications
-                    <div class="notification">
-                        <p> 4</p>
-                    </div>
-                </a><a>Places</a>
-                <div class="profile_pic" id = "profile_pic"  onclick=openPopUs()> <audio id="audio" src="src/amogus.mp3"></audio> <img src="src/profile_pic.jpg" alt="profile picture">
-                    <div class="red_dot"></div>
-                </div>
-
-            </div>
-            <div class="weather">
-                <div class="temperature">
-                    <img src="src/rain.svg" alt="rain">
-                    <div class="day">
-                        <h3>Today</h3>
-                        <p>Sat, 3 Aug</p>
-                    </div>
-                </div>
-                <div class="grades">
-                    <h1>30</h1>
-                    <p>°C</p>
-                </div>
-                <div class="location">
-                    <div class="remove_container">
-                        <p id="location"></p>
-                        <div class="trash" onclick="deleteCity()"><img src="src/trash.svg" alt="delete"></div>
-                    </div>
-                    <p>Feels like 34 &nbsp; ⬤ &nbsp; Sunset 20:15</p>
-                </div>
-                <div class="charts">
-                    <div class="bigtext">
-                        <div class="chance">
-                            <h3>Chance of rain</h3>
-                        </div>
-                        <div class="text">
-
-                            <p>sunny</p>
-                            <p>rainy</p>
-                            <p>heavy rain</p>
-                        </div>
-                    </div>
-
-                    <div class="lines">
-                        <div class="chart1">
-                            <div class="line1"></div>
-                            <p>12</p>
-                        </div>
-                        <div class="chart2">
-                            <div class="line2"></div>
-                            <p>14</p>
-                        </div>
-                        <div class="chart3">
-                            <div class="line3"></div>
-                            <p>16</p>
-                        </div>
-                        <div class="chart4">
-                            <div class="line4"></div>
-                            <p>16</p>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-            <img src="src/Vector.png" alt="cloud" class="background">
-            <img src="src/Vector.png" alt="cloud" class="background2">
-        </div>
-
-
-
-    </div>
     </div>
 
 </body>
