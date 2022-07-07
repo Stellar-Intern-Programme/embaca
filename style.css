@@ -322,9 +322,10 @@ body {
   gap: 20px;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
-.left .weather .time .active {
+.active {
   color: black;
 }
 

@@ -38,6 +38,8 @@ function submitForm(name) {
     let background = document.getElementById("background_image");
     background.style.background = "none";
     imgContent.style.display = "flex";
+    const location = document.getElementById("location")
+    location.innerText = name;
 }
 function openModal() {
     let modal = document.getElementById("modal");
@@ -94,9 +96,14 @@ function search(e) {
 
 // }
 
-function selectTime(interval) {
+function selectTime(interval, element) {
     console.log(interval)
+    if (element) {
+        const timeTab = [...document.getElementsByClassName("time_tab")]
+        timeTab.forEach(t => t.classList.remove("active"))
+        element.classList.add("active")
 
+    }
     let containerSelectat = document.getElementById(interval)
     const daysCharts = document.getElementById("chartsDays")
     const hoursCharts = document.getElementById("chartsHours")
@@ -235,6 +242,12 @@ function selectCity(city) {
     if (city && city.hasOwnProperty("cityName")) {
         location.innerHTML = city.cityName;
         activeCity = city;
+        fetch("https://api.openweathermap.org/data/2.5/find?q=" + city.cityName + "&APPID=" + API_KEY).then(res => res.json()).then(data => {
+            let v = data.list
+            v.forEach((w) => {
+                selectedCityInput(w.coord, w.name)
+            });
+        })
     }
 }
 
@@ -318,7 +331,7 @@ function selectedCityInput(coord, name) {
         feelsLike.innerText = `${Math.floor(data.current.feels_like - 273)}°C`
         submitForm(name);
         renderWeatherData(data.daily, data.hourly, data.minutely)
-        selectTime('chartsMinutes')
+        selectTime('chartsMinutes', null)
         if (data.current.weather[0].main === "Clear") {
 
             let sunny = document.getElementById("sunny")
