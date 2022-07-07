@@ -315,6 +315,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+  height: 100%;
 }
 
 .left .weather .time {
@@ -705,6 +706,9 @@ body {
     transition: 0.5s all;
     cursor: pointer;
   }
+  .drop{
+    margin-left: 115px;
+  }
   .allplaces:hover .arrow {
     transform: rotate(0deg);
     margin-top: 1 px;
@@ -723,7 +727,7 @@ body {
     margin-top: -25px;
   }
   .left .menu .search {
-    width: 95%;
+    width: 220%;
   }
   .left .images {
     overflow: scroll;
@@ -835,7 +839,26 @@ body {
     border-radius: 20px;
     width: 10px;
   }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .invisible{
   display: none;
 }
@@ -852,4 +875,16 @@ body {
 }
 .rainy-visible{
   display:block;
+}
+.laod-left{
+  display: flex;
+  width: 10%;
+  margin: auto;
+  display: none;
+}
+.load-left-visible{
+  display: block;
+}
+.invisible-left{
+  display: none;
 }

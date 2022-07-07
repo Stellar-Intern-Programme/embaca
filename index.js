@@ -317,10 +317,22 @@ function selectedCityInput(coord, name) {
     const celsius = document.getElementById("celsius")
     curentTemp.classList.add("invisible")
     celsius.classList.add("invisible")
+    const loadLeft = document.getElementById("load-left")
+    loadLeft.classList.add("load-left-visible")
+    const minutes = document.getElementById("chartsMinutes")
+    const hours = document.getElementById("chartsHours")
+    const days = document.getElementById("chartsDays")
+    minutes.classList.add("invisible-left")
+    hours.classList.add("invisible-left")
+    days.classList.add("invisible-left")
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&APPID=${API_KEY}`).then(result => result.json()).then(data => {
         gif.classList.remove("gif-visible")
         curentTemp.classList.remove("invisible")
         celsius.classList.remove("invisible")
+        loadLeft.classList.remove("load-left-visible")
+        minutes.classList.remove("invisible-left")
+        days.classList.remove("invisible-left")
+        hours.classList.remove("invisible-left")
         console.log(data);
         removeRecommend();
         const currentTemp = document.getElementById("currentTemp");
