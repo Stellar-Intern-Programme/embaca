@@ -1,3 +1,6 @@
+const weekDays = ['Sun', 'Mon', "Tue", "Wed", "Thu", "Fri", "Sat"]
+const yearMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
 
 const API_KEY = "db94f9a8947af9eaed69ffec96319ded"
 
@@ -13,6 +16,14 @@ window.addEventListener("load", (event) => {
     selectCity(cityArray[0]);
     // renderWeatherData(Object.keys(weather)[0])
     document.getElementById("menuSearchInput").addEventListener("keyup", searchCity)
+    const date = new Date()
+    let day = date.getDay()
+    let pDate = document.getElementById("date")
+    let dateNr = date.getDate()
+    let month = date.getMonth()
+    pDate.innerText = `${weekDays[day]}, ${dateNr} ${yearMonth[month]} `
+
+
 });
 //click function
 function submitForm(name) {
@@ -113,12 +124,12 @@ function renderATab(type, chart) {
 
     if (type.humidity) {
         const rainChance = type.map(element => element.humidity)
-    const rainDiv = document.createElement("div")
-    rainDiv.innerHTML = ""
-    rainChance.forEach(rain => {
-        rainDiv.innerHTML += ` <p>${rain}%</p>`
-    })
-    rainDiv.className = "umidity"
+        const rainDiv = document.createElement("div")
+        rainDiv.innerHTML = ""
+        rainChance.forEach(rain => {
+            rainDiv.innerHTML += ` <p>${rain}%</p>`
+        })
+        rainDiv.className = "umidity"
         chart.appendChild(rainDiv)
     }
 
@@ -308,6 +319,17 @@ function selectedCityInput(coord, name) {
         submitForm(name);
         renderWeatherData(data.daily, data.hourly, data.minutely)
         selectTime('chartsMinutes')
+        if (data.current.weather[0].main === "Clear") {
+
+            let sunny = document.getElementById("sunny")
+            sunny.classList.add("sunny-visible")
+            rainy.classList.remove("rainy-visible")
+        }
+        else {
+            let rainy = document.getElementById("rainy")
+            rainy.classList.add("rainy-visible")
+            sunny.classList.remove("sunny-visible")
+        }
     })
 
 }

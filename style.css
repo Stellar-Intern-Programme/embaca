@@ -838,3 +838,17 @@ body {
 .invisible{
   display: none;
 }
+.sunny{
+  margin-top: -15px;
+  display: none;
+  width: 20%;
+}
+.sunny-visible{
+  display: block;
+}
+.rainy{
+  display: none;
+}
+.rainy-visible{
+  display:block;
+}
