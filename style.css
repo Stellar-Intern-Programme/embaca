@@ -705,6 +705,9 @@ body {
     transition: 0.5s all;
     cursor: pointer;
   }
+  .drop{
+    margin-left: 115px;
+  }
   .allplaces:hover .arrow {
     transform: rotate(0deg);
     margin-top: 1 px;
@@ -723,7 +726,7 @@ body {
     margin-top: -25px;
   }
   .left .menu .search {
-    width: 95%;
+    width: 220%;
   }
   .left .images {
     overflow: scroll;
@@ -836,7 +839,7 @@ body {
     width: 10px;
   }
 
-  
+
 }
 
 
