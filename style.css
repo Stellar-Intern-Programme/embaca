@@ -328,11 +328,14 @@ body {
   color: black;
 }
 
-.left .weather .charts {
-  display: flex;
+.charts {
+  display: none;
   margin-top: 30px;
   font-size: 10px;
   justify-content: space-between;
+}
+.chart_visible{
+  display: flex;
 }
 
 .left .weather .charts .days_chart {

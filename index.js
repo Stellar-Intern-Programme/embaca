@@ -1,11 +1,3 @@
-//import
-let weather
-fetch('./weather.json').then(res => res.json()).then(data => {
-    weather = data
-    renderWeather();
-})
-
-
 
 const API_KEY = "db94f9a8947af9eaed69ffec96319ded"
 
@@ -65,55 +57,72 @@ function search(e) {
 }
 
 
-function renderWeather() {
-    let divP = document.querySelector(".time")
-    divP.innerHTML = ""
-    Object.keys(weather).forEach((item, key) => {
-        let p = document.createElement("p")
-        p.textContent = item
-        divP.appendChild(p)
-        if (key === 0) {
-            p.classList = "active"
-        }
-        p.addEventListener("click", () => {
+// function renderWeather() {
+//     let divP = document.querySelector(".time")
+//     divP.innerHTML = ""
+//     Object.keys(weather).forEach((item, key) => {
+//         let p = document.createElement("p")
+//         p.textContent = item
+//         divP.appendChild(p)
+//         if (key === 0) {
+//             p.classList = "active"
+//         }
+//         p.addEventListener("click", () => {
 
-            renderWeatherData(item)
-            const children = divP.children
-            for (let i = 0; i < children.length; i++) {
-                children[i].className = ""
-            }
-            p.className = "active"
+//             renderWeatherData(item)
+//             const children = divP.children
+//             for (let i = 0; i < children.length; i++) {
+//                 children[i].className = ""
+//             }
+//             p.className = "active"
 
 
 
-        })
-    })
+//         })
+//     })
 
+// }
+
+function selectTime(interval) {
+    console.log(interval)
+
+    let containerSelectat = document.getElementById(interval)
+    const daysCharts = document.getElementById("chartsDays")
+    const hoursCharts = document.getElementById("chartsHours")
+    const minutesCharts = document.getElementById("chartsMinutes")
+
+    daysCharts.classList.remove("chart_visible")
+    hoursCharts.classList.remove("chart_visible")
+    minutesCharts.classList.remove("chart_visible")
+    containerSelectat.classList.add("chart_visible")
 }
 
+function renderATab(type, chart) {
+    const hours = type.map(element => {
 
-function renderWeatherData(click) {
-    const daysCharts = document.getElementById("charts")
-    daysCharts.innerHTML = ""
-    const data = weather[click]
+        const time = new Date(element.dt)
 
-    const days = data.map(element => element.day)
+        return `${time.getHours()}:${time.getMinutes()}`
+
+    })
     const daysDiv = document.createElement("div")
     daysDiv.innerHTML = ""
-    days.forEach(daysString => daysDiv.innerHTML += `<p>${daysString}</p>`)
+    hours.forEach(hoursString => daysDiv.innerHTML += `<p>${hoursString}</p>`)
     daysDiv.className = "days_chart"
-    daysCharts.appendChild(daysDiv)
+    chart.appendChild(daysDiv)
 
-    const rainChance = data.map(element => element.rainChance)
+    if (type.humidity) {
+        const rainChance = type.map(element => element.humidity)
     const rainDiv = document.createElement("div")
     rainDiv.innerHTML = ""
     rainChance.forEach(rain => {
         rainDiv.innerHTML += ` <p>${rain}%</p>`
     })
     rainDiv.className = "umidity"
-    daysCharts.appendChild(rainDiv)
+        chart.appendChild(rainDiv)
+    }
 
-    const storm = data.map(element => element.day)
+    const storm = type.map(element => element.dt)
     const stormDiv = document.createElement("div")
     stormDiv.innerHTML = ""
     storm.forEach(daysString => {
@@ -123,17 +132,27 @@ function renderWeatherData(click) {
         stormDiv.appendChild(img)
     })
     stormDiv.className = "storm"
-    daysCharts.appendChild(stormDiv)
+    chart.appendChild(stormDiv)
 
-    const minDegrees = data.map(element => element.minDegrees)
+    const minDegrees = type.map(element => {
+        if (element.temp && element.temp.min) {
+            return Math.floor(element.temp.min - 273)
+        }
+        return 0;
+    })
     const minDiv = document.createElement("div")
     minDiv.innerHTML = ""
-    minDegrees.forEach(minDegreesString => minDiv.innerHTML += `<p>${minDegreesString}</p>`)
+    minDegrees.forEach(minDegreesString => minDiv.innerHTML += `<p>${minDegreesString}°C</p>`)
     minDiv.className = "chart_bars"
-    daysCharts.appendChild(minDiv)
+    chart.appendChild(minDiv)
 
 
-    const charts = data.map(e => e.minDegrees)
+    const charts = type.map(e => {
+        if (e.temp && e.temp.min) {
+            return Math.floor(e.temp.min - 273)
+        }
+        return 0;
+    })
     const chartBar = document.createElement("div")
     chartBar.innerHTML = "";
     charts.forEach(minDegreesString => {
@@ -144,25 +163,42 @@ function renderWeatherData(click) {
         chartBar1.className = "chart_bar"
         const filledChartBar = document.createElement("div")
         filledChartBar.className = "filled_chart_bar";
-        filledChartBar.style.width = `${minDegreesString * 3 + 6}%`
+        filledChartBar.style.width = `${minDegreesString}%`
         chartDiv.appendChild(chartBar1)
         chartBar1.appendChild(filledChartBar)
         chartBar.appendChild(chartDiv)
 
     })
-    daysCharts.appendChild(chartBar)
+    chart.appendChild(chartBar)
     chartBar.className = "chart_bars"
 
-    const maxDegrees = data.map(element => element.maxDegrees)
+    const maxDegrees = type.map(element => {
+        if (element.temp && element.temp.max) {
+            return Math.floor(element.temp.max - 273)
+        }
+        return 0;
+    })
     const maxDiv = document.createElement("div")
     maxDiv.innerHTML = ""
-    maxDegrees.forEach(maxDegreesString => maxDiv.innerHTML += `<p>${maxDegreesString}</p>`)
+    maxDegrees.forEach(maxDegreesString => maxDiv.innerHTML += `<p>${maxDegreesString}°C</p>`)
     maxDiv.className = "chart_bars"
-    daysCharts.appendChild(maxDiv)
+    chart.appendChild(maxDiv)
+
+}
 
 
+function renderWeatherData(minutely, hourly, daily) {
+    const daysCharts = document.getElementById("chartsDays")
+    const hoursCharts = document.getElementById("chartsHours")
+    const minutesCharts = document.getElementById("chartsMinutes")
+    daysCharts.innerHTML = ""
+    hoursCharts.innerHTML = ""
+    minutesCharts.innerHTML = ""
 
 
+    renderATab(minutely, minutesCharts)
+    renderATab(hourly, hoursCharts)
+    renderATab(daily, daysCharts)
 
 }
 
@@ -225,12 +261,12 @@ function onInputChange(event) {
 }
 
 function searchCity(event) {
+
     if (event.keyCode === 13) {
         const value = document.getElementById("menuSearchInput").value
         fetch("https://api.openweathermap.org/data/2.5/find?q=" + value + "&APPID=" + API_KEY).then(res => res.json()).then(data => {
-            recommend(data)
-
-
+            console.log(data);
+            recommend(data);
         })
     }
 }
@@ -269,7 +305,9 @@ function selectedCityInput(coord, name) {
         const feelsLike = document.getElementById("feelsLike")
         feelsLike.innerHTML = "";
         feelsLike.innerText = `${Math.floor(data.current.feels_like - 273)}°C`
-        submitForm(name)
+        submitForm(name);
+        renderWeatherData(data.daily, data.hourly, data.minutely)
+        selectTime('chartsMinutes')
     })
 
 }
@@ -297,18 +335,18 @@ function recommend(data) {
     });
 }
 
-function renderWeatherContent() {
-    const leftCharts = document.getElementById("leftCharts");
-    const chart1 = document.getElementById("chart1")
-    chart1.style.display = "flex";
-    const daysCharts = document.getElementById("daysCHarts");
-    daysCharts.appendChild(p);
-    const p = document.createElement("p");
-    p.textContent = item
-    const umidity = document.getElementById("umidity");
-    const img = createElement("img");
-    img.setAttribute("src", "src/rain_drop.svg");
-}
+// function renderWeatherContent() {
+//     const leftCharts = document.getElementById("leftCharts");
+//     const chart1 = document.getElementById("chart1")
+//     chart1.style.display = "flex";
+//     const daysCharts = document.getElementById("daysCHarts");
+//     daysCharts.appendChild(p);
+//     const p = document.createElement("p");
+//     p.textContent = item
+//     const umidity = document.getElementById("umidity");
+//     const img = createElement("img");
+//     img.setAttribute("src", "src/rain_drop.svg");
+// }
 
 function play() {
     var audio = document.getElementById("audio");
