@@ -9,14 +9,14 @@
   height: 8px;
 }
 
-/* Track */
+
 
 ::-webkit-scrollbar-track {
   background: white;
   width: 8px;
 }
 
-/* Handle */
+
 
 ::-webkit-scrollbar-thumb {
   background: #1f3b5b;
@@ -24,7 +24,7 @@
   border-radius: 3px;
 }
 
-/* Handle on hover */
+
 
 ::-webkit-scrollbar-thumb:hover {
   background: #2a507a;
@@ -38,13 +38,13 @@
 
 /* Handle */
 
+
 .right::-webkit-scrollbar-thumb {
   background: #1f3b5b;
   width: 8px;
   border-radius: 3px;
 }
 
-/* Handle on hover */
 
 .right::-webkit-scrollbar-thumb:hover {
   background: #2a507a;
@@ -168,10 +168,8 @@ body {
   flex-direction: column;
   flex: 0.7;
   background-color: #ddf0f5;
-  padding: 5%;
+  padding: 2%;
   padding-right: 1%;
-  overflow: scroll;
-  overflow-x: hidden;
 }
 
 .left .menu {
@@ -210,6 +208,7 @@ body {
   margin-left: 5px;
   font-size: 15px;
   display: flex;
+  position: relative;
 }
 
 .dropbtn {
@@ -217,7 +216,6 @@ body {
 }
 
 .drop {
-  position: relative;
   display: inline-flex;
   transform: none;
 }
@@ -225,7 +223,7 @@ body {
 .drop_content {
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   background-color: #365b7d;
   border-radius: 10px;
   transition: 0.5s;
@@ -250,6 +248,7 @@ body {
 
 .drop:hover .drop_content {
   display: flex;
+  flex-direction: column;
   left: 80px;
   margin-top: -12px;
 }
@@ -281,7 +280,7 @@ body {
 .left .images {
   display: flex;
   gap: 40px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding-top: 10px;
   font-size: 18px;
   flex-shrink: 0;
@@ -354,10 +353,13 @@ body {
   margin-top: 30px;
   font-size: 10px;
   justify-content: space-between;
+  overflow: auto;
+  height: 25vh;
 }
 .chart_visible{
   display: flex;
 }
+
 
 .left .weather .charts .days_chart {
   display: flex;
@@ -533,6 +535,9 @@ body {
   align-items: center;
   color: white;
 }
+.feels_like{
+  display: flex;
+}
 
 .right .weather .location .remove_container {
   display: flex;
@@ -543,12 +548,12 @@ body {
   cursor: pointer;
 }
 
-.right .weather .charts {
-  margin-top: 60px;
+.right .weather .charts_right {
+  padding: 10px;
   display: flex;
 }
 
-.right .weather .charts .text {
+.right .weather .charts_right .text {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -558,13 +563,13 @@ body {
   margin-bottom: 20px;
 }
 
-.right .weather .charts .chance {
+.right .weather .charts_right .chance {
   font-size: 20px;
   color: white;
   margin-left: 15px;
 }
 
-.right .weather .charts .lines {
+.right .weather .charts_right .lines {
   display: flex;
   gap: 35px;
   margin-top: 40px;
@@ -573,53 +578,53 @@ body {
   align-items: baseline;
 }
 
-.right .weather .charts .lines .chart1 .line1 {
+.right .weather .charts_right .lines .chart1 .line1 {
   background-color: #365b7d;
   border-radius: 10px;
   height: 80px;
   width: 10px;
 }
 
-.right .weather .charts .lines .chart2 .line2 {
+.right .weather .charts_right .lines .chart2 .line2 {
   background-color: yellow;
   border-radius: 10px;
   height: 120px;
   width: 10px;
 }
 
-.right .weather .charts .lines .chart3 .line3 {
+.right .weather .charts_right .lines .chart3 .line3 {
   background-color: #365b7d;
   border-radius: 10px;
   height: 100px;
   width: 10px;
 }
 
-.right .weather .charts .lines .chart4 .line4 {
+.right .weather .charts_right .lines .chart4 .line4 {
   background-color: #365b7d;
   border-radius: 10px;
   height: 60px;
   width: 10px;
 }
 
-.right .weather .charts .lines .chart1 {
+.right .weather .charts_right .lines .chart1 {
   color: white;
   font-size: 8px;
   gap: 5px;
 }
 
-.right .weather .charts .lines .chart2 {
+.right .weather .charts_right .lines .chart2 {
   color: white;
   font-size: 8px;
   gap: 5px;
 }
 
-.right .weather .charts .lines .chart3 {
+.right .weather .charts_right .lines .chart3 {
   color: white;
   font-size: 8px;
   gap: 5px;
 }
 
-.right .weather .charts .lines .chart4 {
+.right .weather .charts_right .lines .chart4 {
   color: white;
   font-size: 8px;
   gap: 5px;
@@ -662,8 +667,8 @@ body {
 
 .allplaces:hover .arrow {
   transform: rotate(-90deg);
-  margin-top: -6px;
-  margin-left: 6px;
+  margin-top: -16px;
+  margin-left: 16px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -700,15 +705,19 @@ body {
     display: flex;
     flex-direction: column-reverse;
     height: 95vh;
-    width: fit-content;
+    width: 90vw;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   }
+
   .left {
-    flex: 0.7;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex: 0.5;
   }
   .right {
-    flex: 0.3;
-    overflow: unset;
+    overflow-y: hidden;
+    flex: 0.5;
+  
   }
   .menu {
     position: relative;
@@ -792,10 +801,9 @@ body {
   }
   .left .weather .time {
     white-space: nowrap;
-    overflow: scroll;
-    overflow-y: hidden;
   }
   .left .weather .charts {
+    overflow-x: scroll;
     justify-content: space-between;
   }
   .left .weather .charts .days_chart {
@@ -810,11 +818,11 @@ body {
   .left .weather .charts .storm img {
     padding-bottom: 10px;
   }
-  .left .weather .charts .chart1 {
-    padding-bottom: 10px;
+  .left .weather .charts .chart_bars {
+    gap: 10px;
   }
-  .left .weather .charts .chart1 .chart_bar {
-    width: 100px;
+  .chart_bar {
+    width: 25px;
     height: 7px;
   }
   .left .weather .charts .chart1 .chart_bar .filled_chart_bar {
@@ -823,12 +831,11 @@ body {
     left: 65%;
     position: relative;
   }
-  .right .weather .charts {
+  .right .weather .charts_right {
     display: none;
   }
   .right .weather {
     font-size: 15px;
-    margin-top: -80px;
   }
   .right .weather .grades h1 {
     font-size: 120px;
@@ -836,58 +843,28 @@ body {
   .right .background {
     display: none;
   }
+  .temperature{
+    margin-top: 80px;
+  }
   .right .background2 {
     width: 60%;
     height: 60%;
     top: 20%;
     right: 120px;
   }
+
   .right .text {
-    margin-top: 0px;
+    margin-top: -30px;
+    margin-bottom: -100px;
+    
   }
   .right .location {
     margin-bottom: 10px;
   }
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #ddf0f5;
-    border-radius: 20px;
-    width: 10px;
-  }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #365b7d;
-    width: 10px;
-    border-radius: 20px;
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #1f3b5b;
-    border-radius: 20px;
-    width: 10px;
-  }
+
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .invisible{
   display: none;

@@ -41,6 +41,19 @@ function submitForm(name) {
     const location = document.getElementById("location")
     location.innerText = name;
 }
+function submitFormOnTheCity(name) {
+    const cityName = name;
+    const photo = "https://cdn.pixabay.com/photo/2015/03/11/12/31/buildings-668616_960_720.jpg";
+    cityArray.push({ photo: photo, cityName: cityName });
+    localStorage.setItem("city", JSON.stringify(cityArray)); //adaug valorile in array
+    cityName.value = "";
+    photo.value = "";
+    let background = document.getElementById("background_image");
+    background.style.background = "none";
+    imgContent.style.display = "flex";
+    const location = document.getElementById("location")
+    location.innerText = name;
+}
 function openModal() {
     let modal = document.getElementById("modal");
     modal.style.display = "flex";
@@ -245,7 +258,7 @@ function selectCity(city) {
         fetch("https://api.openweathermap.org/data/2.5/find?q=" + city.cityName + "&APPID=" + API_KEY).then(res => res.json()).then(data => {
             let v = data.list
             v.forEach((w) => {
-                selectedCityInput(w.coord, w.name)
+                selectedCityInputOnSelectedCity(w.coord, w.name)
             });
         })
     }
@@ -342,6 +355,56 @@ function selectedCityInput(coord, name) {
         feelsLike.innerHTML = "";
         feelsLike.innerText = `${Math.floor(data.current.feels_like - 273)}°C`
         submitForm(name);
+        renderWeatherData(data.daily, data.hourly, data.minutely)
+        selectTime('chartsMinutes', null)
+        if (data.current.weather[0].main === "Clear") {
+
+            let sunny = document.getElementById("sunny")
+            sunny.classList.add("sunny-visible")
+            rainy.classList.remove("rainy-visible")
+        }
+        else {
+            let rainy = document.getElementById("rainy")
+            rainy.classList.add("rainy-visible")
+            sunny.classList.remove("sunny-visible")
+        }
+        cityName.innerHTML = ""
+    })
+
+}
+function selectedCityInputOnSelectedCity(coord, name) {
+    const cityName = document.getElementById("menuSearchInput");
+    const gif = document.getElementById("_gif")
+    gif.classList.add("gif-visible")
+    const curentTemp = document.getElementById("currentTemp")
+    const celsius = document.getElementById("celsius")
+    curentTemp.classList.add("invisible")
+    celsius.classList.add("invisible")
+    const loadLeft = document.getElementById("load-left")
+    loadLeft.classList.add("load-left-visible")
+    const minutes = document.getElementById("chartsMinutes")
+    const hours = document.getElementById("chartsHours")
+    const days = document.getElementById("chartsDays")
+    minutes.classList.add("invisible-left")
+    hours.classList.add("invisible-left")
+    days.classList.add("invisible-left")
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&APPID=${API_KEY}`).then(result => result.json()).then(data => {
+        gif.classList.remove("gif-visible")
+        curentTemp.classList.remove("invisible")
+        celsius.classList.remove("invisible")
+        loadLeft.classList.remove("load-left-visible")
+        minutes.classList.remove("invisible-left")
+        days.classList.remove("invisible-left")
+        hours.classList.remove("invisible-left")
+        console.log(data);
+        removeRecommend();
+        const currentTemp = document.getElementById("currentTemp");
+        currentTemp.innerHTML = ""
+        currentTemp.innerText = Math.floor(data.current.temp - 273)
+        const feelsLike = document.getElementById("feelsLike")
+        feelsLike.innerHTML = "";
+        feelsLike.innerText = `${Math.floor(data.current.feels_like - 273)}°C`
+        submitFormOnTheCity(name);
         renderWeatherData(data.daily, data.hourly, data.minutely)
         selectTime('chartsMinutes', null)
         if (data.current.weather[0].main === "Clear") {

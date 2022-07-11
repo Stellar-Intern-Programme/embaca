@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
     <script src="index.js"></script>
     <title>Weather Forecast</title>
     <link rel="icon" type="image/png" href="src/tab_icon.ico">
@@ -126,10 +126,12 @@
                         <p id="location"></p>
                         <div class="trash" onclick="deleteCity()"><img src="src/trash.svg" alt="delete"></div>
                     </div>
-                    <p>Feels like </p>
-                    <p id="feelsLike">-</p>
+                    <div class="feels_like"> <p>Feels like &nbsp;</p>
+                    <p id="feelsLike">-</p></div>
+                   
+                    
                 </div>
-                <div class="charts">
+                <div class="charts_right">
                     <div class="bigtext">
                         <div class="chance">
                             <h3>Chance of rain</h3>
