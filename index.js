@@ -1,6 +1,9 @@
 const weekDays = ['Sun', 'Mon', "Tue", "Wed", "Thu", "Fri", "Sat"]
 const yearMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-
+const arrayOfImages = [
+    { name: 'iaşi', image: 'src/palat.jpg' },
+    { name: 'paris', image: 'src/paris.jpg' }
+]
 
 const API_KEY = "db94f9a8947af9eaed69ffec96319ded"
 
@@ -28,7 +31,14 @@ window.addEventListener("load", (event) => {
 //click function
 function submitForm(name) {
     const cityName = name;
-    const photo = "https://cdn.pixabay.com/photo/2015/03/11/12/31/buildings-668616_960_720.jpg";
+    arrayOfImages.forEach(x => {
+        if (x.name === cityName) {
+            const photo = x.image
+
+
+        }
+    })
+    const photo = arrayOfImages[0].image;
     cityArray.push({ photo: photo, cityName: cityName });
     localStorage.setItem("city", JSON.stringify(cityArray)); //adaug valorile in array
     closeModal(); //inchid modalul
