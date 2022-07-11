@@ -169,7 +169,7 @@ function renderATab(type, chart) {
         if (element.temp && element.temp.min) {
             return Math.floor(element.temp.min - 273)
         }
-        return 0;
+        return "N/A";
     })
     const minDiv = document.createElement("div")
     minDiv.innerHTML = ""
@@ -182,7 +182,7 @@ function renderATab(type, chart) {
         if (e.temp && e.temp.min) {
             return Math.floor(e.temp.min - 273)
         }
-        return 0;
+        return "N/A";
     })
     const chartBar = document.createElement("div")
     chartBar.innerHTML = "";
@@ -207,7 +207,7 @@ function renderATab(type, chart) {
         if (element.temp && element.temp.max) {
             return Math.floor(element.temp.max - 273)
         }
-        return 0;
+        return "N/A";
     })
     const maxDiv = document.createElement("div")
     maxDiv.innerHTML = ""

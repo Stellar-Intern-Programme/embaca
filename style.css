@@ -755,13 +755,11 @@ body {
   }
   .left .menu .search {
     height: auto;
+    width: 100%;
   }
   .left .text {
     font-size: 25px;
     margin-top: -25px;
-  }
-  .left .menu .search {
-    width: 220%;
   }
   .left .images {
     overflow: scroll;
@@ -816,7 +814,7 @@ body {
     gap: 10px;
   }
   .chart_bar {
-    width: 25px;
+    width: 50%;
     height: 7px;
   }
   .left .weather .charts .chart1 .chart_bar .filled_chart_bar {
