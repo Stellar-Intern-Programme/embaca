@@ -29,18 +29,19 @@ window.addEventListener("load", (event) => {
 
 });
 //click function
-function submitForm(name) {
+function submitForm(name, fromSearch = true) {
     const cityName = name;
+    let photo;
     arrayOfImages.forEach(x => {
         if (x.name === cityName) {
-            const photo = x.image
-
-
-        }
+            photo = x.image
+        } else { photo = "src/palat.jpg" } 
     })
-    const photo = arrayOfImages[0].image;
+    if (fromSearch) {
+    // const photo = " src/palat.jpg"
     cityArray.push({ photo: photo, cityName: cityName });
     localStorage.setItem("city", JSON.stringify(cityArray)); //adaug valorile in array
+    }
     closeModal(); //inchid modalul
     redrawCities(); //adaug un oras nou
     cityName.value = "";
@@ -51,19 +52,7 @@ function submitForm(name) {
     const location = document.getElementById("location")
     location.innerText = name;
 }
-function submitFormOnTheCity(name) {
-    const cityName = name;
-    const photo = "https://cdn.pixabay.com/photo/2015/03/11/12/31/buildings-668616_960_720.jpg";
-    cityArray.push({ photo: photo, cityName: cityName });
-    localStorage.setItem("city", JSON.stringify(cityArray)); //adaug valorile in array
-    cityName.value = "";
-    photo.value = "";
-    let background = document.getElementById("background_image");
-    background.style.background = "none";
-    imgContent.style.display = "flex";
-    const location = document.getElementById("location")
-    location.innerText = name;
-}
+
 function openModal() {
     let modal = document.getElementById("modal");
     modal.style.display = "flex";
@@ -414,7 +403,7 @@ function selectedCityInputOnSelectedCity(coord, name) {
         const feelsLike = document.getElementById("feelsLike")
         feelsLike.innerHTML = "";
         feelsLike.innerText = `${Math.floor(data.current.feels_like - 273)}°C`
-        submitFormOnTheCity(name);
+        submitForm(name, false);
         renderWeatherData(data.daily, data.hourly, data.minutely)
         selectTime('chartsMinutes', null)
         if (data.current.weather[0].main === "Clear") {
