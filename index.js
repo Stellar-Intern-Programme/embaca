@@ -1,8 +1,10 @@
 const weekDays = ['Sun', 'Mon', "Tue", "Wed", "Thu", "Fri", "Sat"]
 const yearMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const arrayOfImages = [
-    { name: 'iaşi', image: 'src/palat.jpg' },
-    { name: 'paris', image: 'src/paris.jpg' }
+    { name: 'Iaşi', image: 'src/palat.jpg' },
+    { name: 'Paris', image: 'src/paris.jpg' },
+    { name: 'Cluj', image: 'src/cluj.jpg' },
+    { name: 'Vaslui', image: 'src/amongus.png' }
 ]
 
 const API_KEY = "db94f9a8947af9eaed69ffec96319ded"
@@ -31,11 +33,12 @@ window.addEventListener("load", (event) => {
 //click function
 function submitForm(name, fromSearch = true) {
     const cityName = name;
-    let photo;
+    let photo = "src/palat.jpg";
     arrayOfImages.forEach(x => {
         if (x.name === cityName) {
             photo = x.image
-        } else { photo = "src/palat.jpg" } 
+            return;
+        }
     })
     if (fromSearch) {
     // const photo = " src/palat.jpg"
@@ -128,6 +131,13 @@ function selectTime(interval, element) {
 }
 
 function renderATab(type, chart) {
+    const minTemps = type.map(x => x?.temp?.min)
+    const minimum = Math.floor(Math.min(...minTemps) - 273);
+    console.log(minimum)
+    const maxTemps = type.map(x => x?.temp?.max)
+    const maximum = Math.floor(Math.max(...maxTemps) - 273);
+    console.log(maximum)
+    const dif = maximum - minimum;
     const hours = type.map(element => {
 
         const time = new Date(element.dt)
@@ -135,6 +145,7 @@ function renderATab(type, chart) {
         return `${time.getHours()}:${time.getMinutes()}`
 
     })
+
     const daysDiv = document.createElement("div")
     daysDiv.innerHTML = ""
     hours.forEach(hoursString => daysDiv.innerHTML += `<p>${hoursString}</p>`)
@@ -179,21 +190,27 @@ function renderATab(type, chart) {
 
     const charts = type.map(e => {
         if (e.temp && e.temp.min) {
-            return Math.floor(e.temp.min - 273)
+            return {
+                min: Math.floor(e.temp.min - 273),
+                max: Math.floor(e.temp.max - 273)
+            }
         }
         return "N/A";
     })
+    // const minimum = Math.min(...type.min)
+    // console.log(minimum)
+    // const maximum = Math.max(...maxDegrees)
     const chartBar = document.createElement("div")
     chartBar.innerHTML = "";
-    charts.forEach(minDegreesString => {
+    charts.forEach(temp => {
         const chartDiv = document.createElement("div")
-
         chartDiv.style.paddingBottom = "3px"
         const chartBar1 = document.createElement("div")
         chartBar1.className = "chart_bar"
         const filledChartBar = document.createElement("div")
         filledChartBar.className = "filled_chart_bar";
-        filledChartBar.style.width = `${minDegreesString}%`
+        filledChartBar.style.width = `calc(${temp.max - temp.min}* 100% /${dif})`
+        filledChartBar.style.marginLeft = `calc(${temp.min - minimum}*100%/${dif})`
         chartDiv.appendChild(chartBar1)
         chartBar1.appendChild(filledChartBar)
         chartBar.appendChild(chartDiv)

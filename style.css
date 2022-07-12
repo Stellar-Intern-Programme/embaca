@@ -170,6 +170,7 @@ body {
   background-color: #ddf0f5;
   padding: 2%;
   padding-right: 1%;
+  overflow: scroll;
 }
 
 .left .menu {
@@ -434,6 +435,7 @@ body {
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
+  min-width: 300px;
 }
 
 .right .text {
@@ -646,8 +648,8 @@ body {
   font-weight: 600;
 }
 .images .another_city:hover img{
-  border: 3px solid;
-  border-color: rgb(30, 5, 255);
+  border: 1px solid;
+  border-color: #1f3b5b;
 }
 
 .images .plus {
